@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/main.css"/>
+        <link rel="stylesheet" href="/css/nav.css"/>
+        <link rel="stylesheet" href="/css/footer.css"/>
+        <meta name="description" content="Warpforge"/>
+        <title>Warpforge - {{ title }}</title>
+    </head>
+    <body>
+        {% include "src/_includes/navigation.njk" %}
+        <h1>{{ title }}</h1>
+        <main>
+            {{ content | safe }}
+        </main>
+        {% include "src/_includes/footer.njk" %}
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/main.css"/>
+        <link rel="stylesheet" href="/css/index.css"/>
+        <link rel="stylesheet" href="/css/nav.css"/>
+        <link rel="stylesheet" href="/css/footer.css"/>
+        <meta name="description" content="Warpforge"/>
+        <title>Warpforge - {{ title }}</title>
+    </head>
+    <body class="body--no-max">
+        {% include "src/_includes/navigation.njk" %}
+        <div class="splash">
+            <div class="splash-content">
+                <h1 class="splash-content__heading">
+                    Simplifying deterministic builds
+                </h1>
+                <p class="splash-content__sub-heading">
+                    A language-agnostic and hermetic build tool with focus on developers productivity, security and sanity.
+                </p>
+                <div class="splash-content__start-script">
+                    Quick start:
+                    <div class="script-window">
+                        <div class="script-window__frame">
+                            <div class="script-window__frame__red"></div>
+                            <div class="script-window__frame__grey"></div>
+                            <div class="script-window__frame__green"></div>
+                        </div>
+                        <div class="script-window__body">
+                            <ul>
+                                <li>#Install warpforge and the required plugins to your GOPATH
+                                </li>
+                                <li>git clone https://github.com/warptools/warpforge
+                                </li>
+                                <li>cd warpforge
+                                </li>
+                                <li>make install</li>
+                                <li>
+                                    <div class="cursor"></div>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="splash-content__cta">
+                        <button class="primary-cta">Get started<img class="primary-cta__external-link" src="/svg/external-link.svg" height="20px" width="20px"/></button>
+                        <div class="h-spacing--lg v-spacing--sm"></div>
+                        <button class="secondary-cta">Read the docs</button>
+                        <div class="meteor">
+                            <img class="meteor-image" src="/svg/meteor.svg" width="562" height="244"/>
+                            <img class="meteor-diamond-gradient" src="/svg/meteor-gradient.svg" width="1920" height="1922"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h1>{{ title }}</h1>
+            <main>
+                {{ content | safe }}
+            </main>
+            <div class="v-spacing--xl"></div>
+            <div class="v-spacing--xl"></div>
+            <div class="v-spacing--xl"></div>
+            <div class="v-spacing--xl"></div>
+            <div class="v-spacing--xl"></div>
+            {% include "src/_includes/footer.njk" %}</body>
+    </body>
+</html>

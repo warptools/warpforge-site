@@ -1,0 +1,38 @@
+{
+  "name": "warpforge-web",
+  "version": "1.0.0",
+  "description": "Warpforge Landingpage",
+  "main": "index.js",
+  "scripts": {
+    "serve": "npx @11ty/eleventy --serve",
+    "build": "npx -y @11ty/eleventy",
+    "test": "hyperlink _public/ --sources=./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/**/warpforge-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Apache-2.0 OR MIT",
+  "bugs": {
+    "url": "https://github.com/**/warpforge-web/issues"
+  },
+  "homepage": "https://github.com/**/warpforge-web#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "@untitaker/hyperlink": "^0.1.26",
+    "clean-css": "^5.3.1",
+    "eleventy-plugin-youtube-embed": "^1.7.1",
+    "markdown-it": "^13.0.1",
+    "markdown-it-anchor": "^8.6.5",
+    "markdown-it-container": "^3.0.0",
+    "markdown-it-footnote": "^3.0.3",
+    "markdown-it-mark": "^3.0.1",
+    "markdown-it-replace-link": "^1.1.0",
+    "markdown-it-table-of-contents": "^0.6.0",
+    "run-script-os": "^1.1.6"
+  }
+}

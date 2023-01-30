@@ -1,0 +1,26 @@
+footer {
+  margin: var(--space-xl) auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  width: 100%;
+}
+
+footer .logo img {
+  width: 100px;
+  height: auto;
+  padding: 0 var(--space-lg);
+}
+
+.footer-navigation {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 0 var(--space-lg);
+}
+
+@media (min-width: 768px) {
+  .footer-navigation {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: var(--space-lg);
+  }
+}

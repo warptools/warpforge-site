@@ -1,0 +1,11 @@
+{% set navPages = collections.all | eleventyNavigation %}
+<footer>
+    <a class="logo" href="/">
+        <img width="235" height="51" src="/svg/logo.svg"/>
+    </a>
+    <div class="footer-navigation">
+        {%- for entry in navPages %}
+            <a href="{{ entry.url }}">{{ entry.title }}</a>
+        {%- endfor %}
+    </div>
+</footer>

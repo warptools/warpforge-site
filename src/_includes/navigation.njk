@@ -1,0 +1,20 @@
+{% set navPages = collections.all | eleventyNavigation %}
+<div class="nav">
+    <input type="checkbox" id="expand-nav"/>
+    <div class="nav__content">
+        <a class="logo" href="/">
+            <img width="30" height="30" src="/svg/logo.svg"/>
+        </a>
+        <label class="nav__open-button" for="expand-nav">
+            <img class="hamburger" width="30" height="30" src="/svg/menu.svg"/>
+            <img class="close" width="30" height="30" src="/svg/x.svg"/>
+        </label>
+    </div>
+    <div class="menu">
+        <div class="menu__content">
+            {%- for entry in navPages %}
+                <a href="{{ entry.url }}">{{ entry.title }}</a>
+            {%- endfor %}
+        </div>
+    </div>
+</div>
