@@ -31,15 +31,15 @@ Philosophically: warpforge aims to be a tool which allows data to live in the me
 
 ## Where’s the source code?
 
-[**https://github.com/warpfork/warpforge**](https://github.com/warpfork/warpforge)
+[**https://github.com/warptools/warpforge**](https://github.com/warptools/warpforge)
 
 Also you can find our default catalog here:
 
-[https://github.com/warpsys/catalog](https://github.com/warpsys/catalog)
+[https://github.com/warptools/catalog](https://github.com/warptools/catalog)
 
 And the source and scripts that produced it here:
 
-[https://github.com/warpsys/warpsys](https://github.com/warpsys/warpsys)
+[https://github.com/warptools/warpsys](https://github.com/warptools/warpsys)
 
 ## Is this Open Source?
 

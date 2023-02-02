@@ -7,7 +7,7 @@ eleventyNavigation:
 ---
 ## Where to discuss
 
-You’ve probably already seen the [Community](https://www.notion.so/Community-676332742afa4276be571f7d035d55db) page.  Links to the chat rooms and the code repos are there!
+You’ve probably already seen the [Community](/community.md) page.  Links to the chat rooms and the code repos are there!
 
 You can use github issues for discussions, or, just come hang out in the chat — or, both!
 
@@ -22,7 +22,7 @@ Github has the neat feature of supporting permissionless contributions through f
 3. Open a PR back to the upstream repo.
 4. We can review and, if it’s good, merge it into the upstream repo.
 
-If you’re newer to Git or Github: See the [Git and Github pro-tips](https://www.notion.so/Git-and-Github-pro-tips-c876f2ad73e0491d87e48b7c31a62812) section for some tips about how exactly to go about it.
+If you’re newer to Git or Github: See the [Git and Github pro-tips](#git-and-github-pro-tips) section for some tips about how exactly to go about it.
 
 If you’re a core contributor (or if you just ask very nicely): you may also be able to push directly to the repos you’re working on.  If so: nothing’s stopping you from using the above strategy anyway ;) but regardless of how you do it, *do* be very careful about the main/master branches.  You should still use PRs to manage changes!
 
@@ -60,7 +60,7 @@ As a core contributor who’s reviewing code:
 
 Usually, your fork repo is called “origin”.  It’s useful to add an alias for “upstream” that points at the upstream:
 
-- `git remote add upstream [https://github.com/warpfork/warpforge](https://github.com/warpfork/warpforge)`
+- `git remote add upstream [https://github.com/warptools/warpforge](https://github.com/warptools/warpforge)`
 
 Now you can do other things like `git fetch upstream` or `git checkout master && git pull upstream/master` to quickly get content from the main upstream repo.
 

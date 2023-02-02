@@ -5,15 +5,10 @@ eleventyNavigation:
     key: Downloads
     order: 60
 ---
-Downloads
 
-- [Technology](#technology)
-- [Demos](#demos)
-- [Media](#media)
-- [Tradeoffs](#tradeoffs)
-- [Variants](#variants)
-- [Join the Community!](#join-the-community)
+Binary downloads for Warpforge are not yet readily available.
 
+Some tags can be found in github: https://github.com/warptools/warpforge/releases
+Some of these may have binary releases attached.
 
-Warpforge
-----------
+More coming soon!
