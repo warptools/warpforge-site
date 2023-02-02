@@ -40,7 +40,7 @@ We don’t have recordings of these at present, but you can try it for yourself 
 
 The public catalog we maintain — and the one warpforge will fetch by default — is here:
 
-[**https://github.com/warpsys/catalog**](https://github.com/warpsys/catalog)
+[**https://github.com/warptools/catalog**](https://github.com/warptools/catalog)
 
 This is rendered as navigable HTML here:
 
@@ -50,15 +50,17 @@ This is rendered as navigable HTML here:
 
 The scripts that build the stuff in the public catalog are all here:
 
-[**https://github.com/warpsys/warpsys**](https://github.com/warpsys/warpsys)
+[**https://github.com/warptools/warpsys**](https://github.com/warptools/warpsys)
 
 These are a “workspace” (there’s lots of “modules” in there).
+
+These modules in this workspace are what produces all the stuff in the Catalog described above.
 
 ## Talks and Presentations
 
 ### GPN2022
 
-Warpforge was presented at GPN20 (which is in 2022).
+Warpforge was presented at GPN20 (which is in 2022) in the talk "**Build Anything with Warpforge -- Reproducibly, Decentralized, With Friends**".
 
 The recording is here: [https://media.ccc.de/v/gpn20-68-build-anything-with-warpforge-reproducibly-decentralized-with-friends](https://media.ccc.de/v/gpn20-68-build-anything-with-warpforge-reproducibly-decentralized-with-friends)
 
@@ -66,8 +68,10 @@ The slides can be found here: [https://slides.com/warpfork/warpforge-gpn2022](ht
 
 ### IPFSCamp 2022
 
-TODO link to recordings
+"**Warpforge — Hashes go in, hashes come out, exec in the middle!**"" was presented at IPFSCamp 2022:
+
+Recording: [https://www.youtube.com/watch?v=wcOjT580iaI](https://www.youtube.com/watch?v=wcOjT580iaI&list=PLuhRWgmPaHtTU1u9TGOVviM234URBdEGa)
 
 ### HIP 2022
 
-TODO link to recordings
+Recording not yet available :)
