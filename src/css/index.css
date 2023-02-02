@@ -139,6 +139,7 @@
 }
 
 .primary-cta {
+  width: 167px;
   background-color: var(--primary-color);
   padding: var(--space-sm) var(--space-md);
   border: 0;
@@ -157,6 +158,7 @@
 }
 
 .secondary-cta {
+  width: 167px;
   border: 2px solid var(--primary-color);
   background-color: transparent;
   padding: var(--space-sm) var(--space-md);
