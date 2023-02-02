@@ -23,9 +23,9 @@ And the Warptools org on github overall contains Warpforge and related tools and
 
 There are also repos for the default catalog of releases, and for the scripts that made them:
 
-[https://github.com/warpsys/catalog](https://github.com/warpsys/catalog)
+[https://github.com/warptools/catalog](https://github.com/warptools/catalog)
 
-[https://github.com/warpsys/warpsys](https://github.com/warpsys/warpsys)
+[https://github.com/warptools/warpsys](https://github.com/warptools/warpsys)
 
 Github issues are fine.  PRs are welcome too (although you probably want to discuss the plan first in either chat or issues, before writing a ton of code).
 
@@ -43,7 +43,7 @@ Get in touch with a core contributor and ask if they can add you as an editor.
 
 …has it's own page!
 
-[Contributor's Guide](/contributions)
+[Contributor's Guide](/contributors/)
 
 ## Ecosystem
 
