@@ -7,10 +7,6 @@ eleventyNavigation:
     order: 10
 ---
 
-# Layer Model
-
-# The Layers
-
 ## In superbrief:
 
 1. Content — filesystems, and their hashes.
