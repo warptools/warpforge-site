@@ -1,3 +1,4 @@
+{% from "footer-macro.njk" import footerLink %}
 {% set navPages = collections.all | eleventyNavigation %}
 <footer>
     <a class="logo" href="/">
@@ -5,7 +6,7 @@
     </a>
     <div class="footer-navigation">
         {%- for entry in navPages %}
-            <a href="{{ entry.url }}">{{ entry.title }}</a>
+            {{ footerLink(entry) }}
         {%- endfor %}
     </div>
 </footer>

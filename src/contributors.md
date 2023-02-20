@@ -3,7 +3,7 @@ title: "Contributor's Guide"
 layout: base.njk
 eleventyNavigation: 
     key: Contributor's Guide
-    order: 30
+    order: 80
 ---
 ## Where to discuss
 

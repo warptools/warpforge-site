@@ -24,3 +24,13 @@ footer .logo img {
     margin-top: var(--space-lg);
   }
 }
+
+.footer-navigation__collection-title {
+  font-weight: bold;
+  color: #888;
+  margin: var(--space-md) 0 0 0;
+}
+
+.footer-navigation__collection-sublinks {
+  font-size: 0.8em;
+}

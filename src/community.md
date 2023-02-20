@@ -7,9 +7,7 @@ eleventyNavigation:
 ---
 ## Chat
 
-We’re in Matrix, [join our channel](https://matrix.to/#/#warpforge:matrix.org)!
-
-We have previously also been in IRC, which was accessible via [https://web.libera.chat/gamja/#warpforge](https://web.libera.chat/gamja/#warpforge). — however, this is discontinued 😞, we found that the bridging to Matrix was too unstable and worrying about what got replicated to IRC caused us to give up too many features, so we’ve retreated from IRC for now.
+Join our channel `#warpforge:matrix.org` on [Matrix](https://matrix.to/#/#warpforge:matrix.org)!
 
 ## Project repos
 
@@ -31,13 +29,11 @@ Github issues are fine.  PRs are welcome too (although you probably want to disc
 
 You’ll have to use your best judgement for which repo to open issues on.  If in doubt, on warpforge is probably the best default choice.  (Or, ask in chat, and see if someone can give you a pointer!)
 
-## Notion
+## Website
 
-You can join us in editing things here on Notion, too!
+You can join us in editing things here our website, too!
 
-Get in touch with a core contributor and ask if they can add you as an editor.
-
-(Sidenote, though: Please *don’t* try to use Notion’s notifications for communication.  They’re incredibly janky.  Even if using comments, it’s still a much better idea to send direct messages to folks on other platforms to make sure they’ve actually seen anything that needs attention.)
+The whole website exists on [github](https://github.com/warptools/warpforge-site), so create a PR if you've made changes or if there's something you think is missing you can create an issue and we'll check it out.
 
 ## Contributor's Guide
 

@@ -8,10 +8,11 @@
         <link rel="stylesheet" href="/css/nav.css"/>
         <link rel="stylesheet" href="/css/footer.css"/>
         <meta name="description" content="Warpforge"/>
-        <title>Warpforge - {{ title }}</title>
+        <title>Warpforge</title>
     </head>
     <body class="body--no-max">
-        {% include "src/_includes/navigation.njk" %}
+        <input type="checkbox" id="expand-nav"/>
+            {% include "src/_includes/navigation.njk" %}
         <div class="splash">
             <div class="splash-content">
                 <h1 class="splash-content__heading">
@@ -35,7 +36,7 @@
                                 <li>git clone https://github.com/warptools/warpforge</li>
                                 <li>cd warpforge</li>
                                 <li>make install</li>
-                                <li>warpforge quickstart</li>
+                                <li>warpforge quickstart example.com/my-module</li>
                                 <li>
                                     <div class="cursor"></div>
                                 </li>

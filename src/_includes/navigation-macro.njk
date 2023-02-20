@@ -1,0 +1,19 @@
+{% macro menuItem(entry) %}
+    {% if entry.children | length > 0 %}
+        <input class="menu__expand-checkbox" type="checkbox" id="expand-{{ entry.title }}"/>
+        <label for="expand-{{ entry.title }}">
+            {{ entry.title }}
+            <span class="go-to-icon"></span>
+        </label>
+        <div class="menu__expandable menu__content">
+            {% for child in entry.children %}
+                {{ menuItem(child) }}
+            {% endfor %}
+        </div>
+    {% else %}
+        <a {% if entry.url == page.url %} class="active" {% endif %} href="{{ entry.url }}">
+            {{ entry.title }}
+            <span class="go-to-icon"></span>
+        </a>
+    {% endif %}
+{% endmacro %}

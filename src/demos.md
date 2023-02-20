@@ -30,7 +30,7 @@ You can also find lots of complete examples in the [examples directory](https://
 
 ### Real world software
 
-You can find usable demos of some much less trivial software, built entirely using the Warpsys packaging style (e.g., completely self-contained portable bundles, using the[Warpsys Dynamic Library Linking Strategy](https://www.notion.so/Warpsys-Dynamic-Library-Linking-Strategy-65f91fbd20c349eab8352f4c303445dc), etc), released in [catalog.warpsys.org](http://catalog.warpsys.org) .
+You can find usable demos of some much less trivial software, built entirely using the Warpsys packaging style (e.g., completely self-contained portable bundles, using the [Warpsys Dynamic Library Linking Strategy](https://www.notion.so/Warpsys-Dynamic-Library-Linking-Strategy-65f91fbd20c349eab8352f4c303445dc), etc), released in [catalog.warpsys.org](http://catalog.warpsys.org) .
 
 For example, you can find packages of software such as Bash, Python, Emacs, Helix, and many more there.
 
@@ -38,13 +38,9 @@ We don’t have recordings of these at present, but you can try it for yourself 
 
 ## Real Catalogs
 
-The public catalog we maintain — and the one warpforge will fetch by default — is here:
+The public catalog we maintain — and the one warpforge will fetch by default - is on [github](https://github.com/warptools/catalog)
 
-[**https://github.com/warptools/catalog**](https://github.com/warptools/catalog)
-
-This is rendered as navigable HTML here:
-
-[**https://catalog.warpsys.org/](https://catalog.warpsys.org/)** 
+This is rendered as navigable HTML. [Check out our live demo](https://catalog.warpsys.org/).
 
 ## Real Workspaces
 

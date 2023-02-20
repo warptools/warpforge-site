@@ -1,0 +1,12 @@
+{% macro footerLink(entry) %}
+    {% if entry.children | length > 0 %}
+        <h5 class="footer-navigation__collection-title">
+            {{ entry.title }}
+        </h5>
+        {% for child in entry.children %}
+            {{ footerLink(child) }}
+        {% endfor %}
+    {% else %}
+        <a href="{{ entry.url }}">{{ entry.title }}</a>
+    {% endif %}
+{% endmacro %}
