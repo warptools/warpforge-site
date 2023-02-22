@@ -1,12 +1,25 @@
 {% macro footerLink(entry) %}
     {% if entry.children | length > 0 %}
-        <h5 class="footer-navigation__collection-title">
-            {{ entry.title }}
-        </h5>
-        {% for child in entry.children %}
-            {{ footerLink(child) }}
-        {% endfor %}
+        <div class="footer-navigation__collection">
+            <h4 class="footer-navigation__collection-title">
+                {{ entry.title }}
+            </h4>
+            {% for child in entry.children %}
+                {{ childFooterLink(child) }}
+            {% endfor %}
+        </div>
     {% else %}
         <a href="{{ entry.url }}">{{ entry.title }}</a>
+    {% endif %}
+{% endmacro %}
+{% macro childFooterLink(entry) %}
+    {% if entry.children | length > 0 %}
+        {% for child in entry.children %}
+            {{ childFooterLink(child) }}
+        {% endfor %}
+    {% else %}
+        <span class="footer-navigation__collection-sublink">
+            <a href="{{ entry.url }}">{{ entry.title }}</a>
+        </span>
     {% endif %}
 {% endmacro %}
