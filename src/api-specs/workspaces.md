@@ -7,19 +7,17 @@ eleventyNavigation:
     order: 20
 ---
 
-# Workspaces
+(WIP.  See [decide how workspaces and catalogs interact](https://warpforge.notion.site/decide-how-workspaces-and-catalogs-interact-beb3a48a26c7428ea623cbb079f08af3) for early notes, which still need to be extracted to this doc.)
 
-(WIP.  See [decide how workspaces and catalogs interact](https://www.notion.so/decide-how-workspaces-and-catalogs-interact-beb3a48a26c7428ea623cbb079f08af3) for early notes, which still need to be extracted to this doc.)
-
-# What are Workspaces?
+## What are Workspaces?
 
 Workspaces are the main organizational concept in Warpforge and how it exists in your development environment (i.e. your computer).
 
 In brief: you're looking at a workspace whenever you see a folder that contains a folder called `.warpforge`.
 
-# Workspaces and your Development Environment
+## Workspaces and your Development Environment
 
-## How are Workspaces seen on the filesystem?
+### How are Workspaces seen on the filesystem?
 
 A workspace is declared wherever there's a folder on your computer that contains a folder called `.warpforge`. For example, if you have the path `/hey/hi/hello/.warpforge`, then the `hello` folder is a workspace.
 
@@ -50,7 +48,7 @@ There is also something called a "root workspace".  A root workspace is one abov
 
 Everyone has at least one root workspace, their home workspace — which implicitly exists at `$HOME/.warpforge/`. 
 
-See [What is the Root Workspace?](https://www.notion.so/Workspaces-7d27dd769ba74440989b101cc14157c6) for more details on the concept of root workspaces.
+See [What is the Root Workspace?](https://warpforge.notion.site/Workspaces-7d27dd769ba74440989b101cc14157c6) for more details on the concept of root workspaces.
 
 ## How do Workspaces relate to Modules?
 
@@ -133,9 +131,9 @@ The workspace search stops at the first root it finds.  The one that’s nearest
 
 In an example: you can have `/foo/.warpforge/root` and `/foo/bar/baz/.warpforge/root`. If you're in `/foo/bar/baz/natch/`, your root workspace is going to be `/foo/bar/baz/`, and that's the end of it.
 
-# FAQ
+## FAQ
 
-### Holy smokes, how may workspaces will I have?
+### Holy smokes, how many workspaces will I have?
 
 Not *that* many.  At least not in depth.  We don't expect the recursion feature to be too heavily used, especially not for individuals working on small projects.
 

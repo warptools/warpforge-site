@@ -6,14 +6,11 @@ eleventyNavigation:
     parent: API Specs
     order: 40
 ---
-
-# CLI Command Overview
-
-# Meta
+## Meta
 
 For contributors: [https://clig.dev](https://clig.dev/) has some pretty good recommendations about CLI UX goals.
 
-# Command list
+## Command list
 
 This page is just a quick list of every command we've thought we'll need, so we can look for consistent patterns.
 
@@ -108,7 +105,3 @@ This seems like a more complicated `status` and maybe we just make status very, 
 - `warpforge module graph` — spit out a dot file of relationships between steps in the module's plot.  Optionally: do it recursively, looking up the replay plots for anything this module imports that has that information available in any of our available catalogs.  Optionally: do it recursively, but only for modules that are in this same workspace.
 - `warpforge module run` — an alias for `warpforge run`.
 - `warpforge module release` — run, and, drag us through a release tagging process afterwards.  Modifies the proximate workspace's catalog (publishing it up to other catalogs is a separate business).
-
-# Subpages
-
-[Output Discipline](https://www.notion.so/Output-Discipline-7ae234d046d8427b993fbc19a70ecf7d)

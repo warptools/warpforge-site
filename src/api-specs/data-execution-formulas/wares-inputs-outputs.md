@@ -75,7 +75,7 @@ Literals will be used to describe the value of environment variables, for exampl
 
 ### Inputs and Outputs
 
-We'll talk more about how WareIDs and Mounts are used as the inputs and outputs of computations in the pages for [Formulas and RunRecords](https://www.notion.so/Formulas-and-RunRecords-cb5718bb605e4f799d2bfa119f9c5cf1) and [Modules, Plots, and Replays](https://www.notion.so/Modules-Plots-and-Replays-4c22a63c927c4066a30de8e5a0f657d8).
+We'll talk more about how WareIDs and Mounts are used as the inputs and outputs of computations in the pages for [Formulas and RunRecords](/api-specs/data-execution-formulas/formulas-and-runrecords) and [Modules, Plots, and Replays](/api-specs/data-execution-formulas/modules-plots-and-replays).
 
 ### Warehousing
 
@@ -85,7 +85,7 @@ TODO all the types about warehouse addressing and mirror lists and etc.  (Or may
 type WarehouseAddr string
 ```
 
-# FAQ
+## FAQ
 
 ### What s a "Ware" vs a "Fileset"?
 

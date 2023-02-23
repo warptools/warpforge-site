@@ -104,7 +104,7 @@ Something is funky here and I don't see the solution yet.
 
 Outputs at the moment can be WareID or Literal.  Maybe this is really fine.
 
-REVIEW: are we going to be inconveniencing ourselves if FormulaInputComplex isn't stringable?  See [notes about rich inputs and caching](https://www.notion.so/decide-how-rich-to-make-inputs-359c79743ccc4c3e80d55da25eb693b1) .  (Probably not.  If a subsystem needs that, both entries in the struct are already stringable — this does not seem like a hard problem to kludge.)
+REVIEW: are we going to be inconveniencing ourselves if FormulaInputComplex isn't stringable?  See [notes about rich inputs and caching](https://warpforge.notion.site/decide-how-rich-to-make-inputs-359c79743ccc4c3e80d55da25eb693b1) .  (Probably not.  If a subsystem needs that, both entries in the struct are already stringable — this does not seem like a hard problem to kludge.)
 
 Output declarations reuse the same `SandboxPort` concept that was used in defining Inputs, but of course are carrying data out of that, rather than in, so we need a structure that says several other things in addition to just where to pick up the data: for example, what packtype to use, and any filters that should happen along the way out:
 
@@ -235,7 +235,7 @@ type RunRecord struct {
 }
 ```
 
-# Examples
+## Examples
 
 ### A simple FormulaAndContext
 
@@ -284,7 +284,7 @@ type RunRecord struct {
 }
 ```
 
-# Sandbox Purity Caveats
+## Sandbox Purity Caveats
 
 Use of some sandbox-breaking features will imply use of other sandbox-breaking features.
 

@@ -30,7 +30,7 @@ You can also find lots of complete examples in the [examples directory](https://
 
 ### Real world software
 
-You can find usable demos of some much less trivial software, built entirely using the Warpsys packaging style (e.g., completely self-contained portable bundles, using the [Warpsys Dynamic Library Linking Strategy](https://www.notion.so/Warpsys-Dynamic-Library-Linking-Strategy-65f91fbd20c349eab8352f4c303445dc), etc), released in [catalog.warpsys.org](http://catalog.warpsys.org) .
+You can find usable demos of some much less trivial software, built entirely using the Warpsys packaging style (e.g., completely self-contained portable bundles, using the [Warpsys Dynamic Library Linking Strategy](https://warpforge.notion.site/Warpsys-Dynamic-Library-Linking-Strategy-65f91fbd20c349eab8352f4c303445dc), etc), released in [catalog.warpsys.org](http://catalog.warpsys.org) .
 
 For example, you can find packages of software such as Bash, Python, Emacs, Helix, and many more there.
 
