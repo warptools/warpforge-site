@@ -47,7 +47,7 @@ html {
 
 body {
   font-family: 'PT Sans', sans-serif;
-  padding: var(--space-lg) var(--space-xl);
+  padding: var(--space-lg) 2.5em;
   margin: auto;
   color: var(--text-color);
   background-color: var(--background-color);
@@ -58,6 +58,12 @@ body {
   text-overflow: word-break;
   word-wrap: break-word;
   line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: var(--space-lg) var(--space-xl);
+  }
 }
 
 .body--no-max {
