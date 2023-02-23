@@ -74,12 +74,14 @@ body {
   padding: 0;
 }
 
-.body--no-max main {
+.body--no-max main,
+.body--no-max footer {
   padding: var(--space-lg) var(--space-xl);
+  width: auto;
 }
 
 main {
-  max-width: 50ch;
+  max-width: 80ch;
 }
 
 @media (min-width: 768px) {
