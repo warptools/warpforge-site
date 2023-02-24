@@ -14,7 +14,7 @@ eleventyNavigation:
 ---
 ```
 
-and is found in (or should be added to) the top of any .md file that should be shown on the website.
+and is found in (or should be added to) the top of any .md file that exists on the website.
 
 ### Title
 The title that you will see when you open the page.
