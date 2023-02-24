@@ -10,3 +10,6 @@ Packages in `warpsys` are packaged as *Zapps* to make them zero-dependency and p
 
 ## Community
 Join our community! You can read more about it on our [community page](/community.md), or hop right in on [Matrix](https://matrix.to/#/#warpforge:matrix.org) and chat with us!
+
+## Contributing to the website
+Contributions are appreciated, if you see something that looks off or you want to add stuff to the website, either open an [issue](https://github.com/warptools/warpforge-site/issues) or fix the problem yourself and create a pull-request when you're done! You can find some information on how to run the website locally [here](/docs/running-locally.md).
