@@ -6,7 +6,7 @@
   "scripts": {
     "serve": "npx @11ty/eleventy --serve",
     "build": "npx -y @11ty/eleventy",
-    "test": "hyperlink _public/ --sources=./src"
+    "test": "rm -rf ./_public && npm run build && hyperlink _public/ --sources=./src"
   },
   "repository": {
     "type": "git",
