@@ -5,13 +5,23 @@ eleventyNavigation:
     key: Community
     order: 40
 ---
-## Chat
+
+Community
+=========
+
+
+
+Chat
+----
 
 Join our channel `#warpforge:matrix.org` on [Matrix](https://matrix.to/#/#warpforge:matrix.org)!
 
-## Project repos
 
-You’ve probably already seen the repo link:
+
+Project Code Repositories
+-------------------------
+
+You've probably already seen the repo link:
 
 [**https://github.com/warptools/warpforge**](https://github.com/warptools/warpforge)
 
@@ -27,34 +37,51 @@ There are also repos for the default catalog of releases, and for the scripts th
 
 Github issues are fine.  PRs are welcome too (although you probably want to discuss the plan first in either chat or issues, before writing a ton of code).
 
-You’ll have to use your best judgement for which repo to open issues on.  If in doubt, on warpforge is probably the best default choice.  (Or, ask in chat, and see if someone can give you a pointer!)
+You'll have to use your best judgement for which repo to open issues on.
+If in doubt, on warpforge is probably the best default choice.
+(Or, ask in chat, and see if someone can give you a pointer!)
 
-## Website
+
+
+Editing the Website
+-------------------
 
 You can join us in editing things here our website, too!
 
-The whole website exists on [github](https://github.com/warptools/warpforge-site), so create a PR if you've made changes or if there's something you think is missing you can create an issue and we'll check it out.
+The whole website exists on [github](https://github.com/warptools/warpforge-site),
+so create a PR if you've made changes,
+or if there's something you think is missing you can create an issue and we'll check it out.
 
-## Contributor's Guide
 
-…has it's own page!
 
-[Contributor's Guide](/contributors/)
+The Contributor's Guide
+-----------------------
 
-## Ecosystem
+...has it's own page!
 
-If you’re a user of Warpforge at all, you’re part of the community!
+[The Contributor's Guide](/contributors.md)
 
-Let us know if you’ve used Warpforge to build stuff, or if you have release catalogs you’d like to share more broadly!
 
-We’d be happy to link to what you’ve built, so other people can see it, enjoy it, and riff off your success.
 
-We’re also quite happy to start accepting release and replay data into the catalog we’re maintaining.  (Automation for this might not be quite here yet, but nonetheless!)
+Ecosystem
+---------
 
-## Email
+If you're a user of Warpforge at all, you're part of the community!
+
+Let us know if you've used Warpforge to build stuff, or if you have release catalogs you'd like to share more broadly!
+
+We'd be happy to link to what you've built, so other people can see it, enjoy it, and riff off your success.
+
+We're also quite happy to start accepting release and replay data into the catalog we're maintaining.
+(Automation for this might not be quite here yet, but nonetheless!)
+
+
+
+Email
+-----
 
 Hello, oldschool friend!
 
-We don’t have a mailing list.  (Yet?)
+We don't have a mailing list.  (Yet?)
 
 `hash@exultant.us` is most definitely going to get you a human being, though.

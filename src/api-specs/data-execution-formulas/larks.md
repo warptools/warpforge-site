@@ -10,7 +10,7 @@ eleventyNavigation:
 
 (This part is *extremely speculative*.  It's beginning to use Starlark as an example of what we might want to see in an "L3+" system.  The goal in this doc isn't necessarily working stuff or committing to details, it's just to dream about what good composition would look like.)
 
-((UPDATE: Work started on https://github.com/ipld/go-datalark — this should provide a very useful binding library that, combined with our existing schemas, should make massive amounts of things “just work”.)
+((UPDATE: Work started on https://github.com/ipld/go-datalark — this should provide a very useful binding library that, combined with our existing schemas, should make massive amounts of things "just work".)
 
 ### Considerations
 

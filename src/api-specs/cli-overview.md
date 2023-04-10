@@ -79,7 +79,7 @@ This seems like a more complicated `status` and maybe we just make status very, 
 
 ### commands that require a local workspace
 
-- `warpforge workspace init` — Makes a .workspace directory.  It won’t commit with git without any *files* in there though so that might be something to fiddle with.
+- `warpforge workspace init` — Makes a .workspace directory.  It won't commit with git without any *files* in there though so that might be something to fiddle with.
     - `warpforge workspace init --root` — Creates a root workspace.
 - `warpforge workspace release` — needs definition (may turn out to be a multi-step command sequence).
 - `warpforge workspace clean memos` — delete memoization records.  With options: those over a certain age, any with a certain wareID in the inputs, etc. Both local and root by default.
@@ -101,7 +101,7 @@ This seems like a more complicated `status` and maybe we just make status very, 
 - `warpforge catalog check --fmt` — reformat the thing.
 - `warpforge catalog search [namefrag]` — search all catalogs in the root workspace for any lineages with a name that contains the fragment.
 - `warpforge catalog search --fulltext [text]` — honestly just use grep though?
-- `warpforge catalog follow <name> <URL>` — alternative name for “add” to consider
+- `warpforge catalog follow <name> <URL>` — alternative name for "add" to consider
 - 
 - `warpforge module check` — check a module/plot for syntax and logical sanity, but do not evaluate it.
 - `warpforge module check --fmt` — reformat the thing.

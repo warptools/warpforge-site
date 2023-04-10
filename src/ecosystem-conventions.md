@@ -5,21 +5,31 @@ eleventyNavigation:
     key: Ecosystem Conventions
     order: 70
 ---
-## Golden Rule(s)
+
+Ecosystem Conventions
+=====================
+
+
+
+Golden Rule(s)
+--------------
 
 - **There is not one monolithic ecosystem.**
-- ... There is generally one highly recommended set of foundational choices in the ecosystem, though.  We sometimes call this “warpsys”.
+- ... There is generally one highly recommended set of foundational choices in the ecosystem, though.  We sometimes call this "warpsys".
 - **warpforge is never dependent on anything in warpsys.**  Warpforge is a very nice toolchain for building warpsys; and warpsys is often designed to have mechanical sympathy with warpforge (e.g. nice package path conventions that are easy to mount atomically, etc); but neither is dependent on the other.
 - We *absolutely* aim that **warpsys packages should be easy to install and compose anywhere, in any system**.
 
-## Goals
+
+
+Goals
+-----
 
 Alright — how do we get packages that can install and compose anywhere, and make users happy, while generating the least fuss possible?
 
-- Build stuff to “play nice”.
-    - Okay.  That’s vague.  But it’s still a goal :)
-- Build stuff to work immediately when it’s unpacked (not require “post-install hooks”).
-    - Post-install hooks means one can’t easily ship read-only systems, and that’s lame.
+- Build stuff to "play nice".
+    - Okay.  That's vague.  But it's still a goal :)
+- Build stuff to work immediately when it's unpacked (not require "post-install hooks").
+    - Post-install hooks means one can't easily ship read-only systems, and that's lame.
 - Build stuff to be path-agnostic.
     - See: [Goal: Path-agnosticism](https://www.notion.so/Goal-Path-agnosticism-1afbca83896d4ef3bff36c9b1344ee89)
 - Build stuff to be co-installable.
@@ -27,7 +37,10 @@ Alright — how do we get packages that can install and compose anywhere, and ma
 
 None of these goals should be hard.  But!  The defaults in a lot of software build toolchains fight pretty hard to get developers to do the wrong things :(  So, we have to build up quite a list of recommendations on how to make things right.
 
-## Our Recommendations
+
+
+Our Recommendations
+-------------------
 
 [Goal: Path-agnosticism](https://www.notion.so/Goal-Path-agnosticism-1afbca83896d4ef3bff36c9b1344ee89)
 

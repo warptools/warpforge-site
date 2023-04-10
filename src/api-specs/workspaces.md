@@ -127,9 +127,9 @@ Creating a new root workspace also makes it possible to configure different loca
 
 ### Can I nest a Root Workspace in another Root Workspace?
 
-Yep.  It’s actually not very special.  (Which is a good thing.  It’s not “odd”.)
+Yep.  It's actually not very special.  (Which is a good thing.  It's not "odd".)
 
-The workspace search stops at the first root it finds.  The one that’s nearest to your cwd has effect, and the other one doesn’t.
+The workspace search stops at the first root it finds.  The one that's nearest to your cwd has effect, and the other one doesn't.
 
 In an example: you can have `/foo/.warpforge/root` and `/foo/bar/baz/.warpforge/root`. If you're in `/foo/bar/baz/natch/`, your root workspace is going to be `/foo/bar/baz/`, and that's the end of it.
 
@@ -175,13 +175,13 @@ Beyond that, it depends on:
 
 ### How should I use these as a solo developer on a small project?
 
-You’ll already have a home workspace, naturally.  You’ll probably fetch some publicly curated catalogs and store them there, so you can build on what other people have already packaged.  `warpforge catalog update` will do that for you.
+You'll already have a home workspace, naturally.  You'll probably fetch some publicly curated catalogs and store them there, so you can build on what other people have already packaged.  `warpforge catalog update` will do that for you.
 
 Make another workspace in the VCS root for your project.  `git init` and `mkdir .warpforge` in the same directory, typically.
 
-Make a module file in you project, too, probably in that same dir.  `warpforge quickstart` will make a nice starter file, but you’ll want to customize it from ther.
+Make a module file in you project, too, probably in that same dir.  `warpforge quickstart` will make a nice starter file, but you'll want to customize it from ther.
 
-Your module will probably want to have one input which says roughly: `"src": "ingest:git:.:HEAD"` (assuming that you’re using git). This incantation will cause Warpforge to take your latest git commits and stick those into the filesystem in the sandbox.
+Your module will probably want to have one input which says roughly: `"src": "ingest:git:.:HEAD"` (assuming that you're using git). This incantation will cause Warpforge to take your latest git commits and stick those into the filesystem in the sandbox.
 
 Consider writing multiple steps in your module if it seems appropriate, e.g. a step for building and a step for testing.
 

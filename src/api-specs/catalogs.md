@@ -16,16 +16,16 @@ Catalogs contain:
 1. **Mappings of human-readable names to WareIDs.**
 2. Mappings of either the human-readable names or the WareIDs to Warehouse Addresses — URLs of places on the network that should be able to provide the content matching those WareIDs.
 3. Metadata attached to the human-readable names — open ended, general purpose.
-    1. May content simple informational content, like an “author” name.
-    2. May contain semi-structured metadata that helps other tooling produce “automatic updates”.
-    3. May contain special metadata that references rebuild instructions (e.g. the Warpforge Plot document which should completely reproduce things) — this is called a “replay”.
-        - (Fun fact: Because Plot documents also include the catalog reference names for all the Plot’s inputs… once can then look up those catalog entries, and find their replay plots, and... so on: this is recursively walkable, and can produce total explanations for where some any data or applications came from!)
+    1. May content simple informational content, like an "author" name.
+    2. May contain semi-structured metadata that helps other tooling produce "automatic updates".
+    3. May contain special metadata that references rebuild instructions (e.g. the Warpforge Plot document which should completely reproduce things) — this is called a "replay".
+        - (Fun fact: Because Plot documents also include the catalog reference names for all the Plot's inputs... once can then look up those catalog entries, and find their replay plots, and... so on: this is recursively walkable, and can produce total explanations for where some any data or applications came from!)
 
 Catalogs have a schema (like all parts of Warpforge APIs!), but *also* come with a standard definition for how to project them onto a filesystem, because this is often operationally useful.  See [Catalogs on the Filesystem](https://www.notion.so/Catalogs-on-the-Filesystem-8bf611efa0db4261aef3f66cbf29fcf5) for more details on the filesystem projection part; keep reading below for the schema and other general info about Catalogs.
 
 ## Schema
 
-(Note: the actual load-bearing schema is in [https://github.com/warptools/warpforge/blob/master/wfapi/wfapi.ipldsch](https://github.com/warptools/warpforge/blob/master/wfapi/wfapi.ipldsch) and may have drifted somewhat from what we have in Notion.  Conceptually, they haven’t diverged.)
+(Note: the actual load-bearing schema is in [https://github.com/warptools/warpforge/blob/master/wfapi/wfapi.ipldsch](https://github.com/warptools/warpforge/blob/master/wfapi/wfapi.ipldsch) and may have drifted somewhat from what we have in Notion.  Conceptually, they haven't diverged.)
 
 ```bash
 ## Catalog is a large data structure that maps human readable names to WareIDs
@@ -127,26 +127,26 @@ type CatalogRelease struct {
 }
 ```
 
-### “Metadata”
+### "Metadata"
 
 What's in the metadata maps?
 
-It's a mixed bag — it's open ended, and meant for extensions.  The metadata maps are meant to freely contain data that we didn’t anticipate nor standardize when developing Warpforge.
+It's a mixed bag — it's open ended, and meant for extensions.  The metadata maps are meant to freely contain data that we didn't anticipate nor standardize when developing Warpforge.
 
 Mostly we expect metadata to be fairly advisory and fairly freetext (e.g. "author").
 
 Sometimes metadata can be used to contain a load-bearing extension.
 
-Metadata can sometimes be a CID that points to another document!  (And we’ll use this ourselves, for some features that Warpforge *does* understand well.)
+Metadata can sometimes be a CID that points to another document!  (And we'll use this ourselves, for some features that Warpforge *does* understand well.)
 
-When we do have well-known extensions, they generally appear just by conventions of well-known names of keys for the metadata map.  See the “extensions” section coming up next.
+When we do have well-known extensions, they generally appear just by conventions of well-known names of keys for the metadata map.  See the "extensions" section coming up next.
 
 ### Extensions
 
-We don’t have a ton of well-know extensions at the moment, but here’s at least one (and a pretty important one — it’s how we store the data for rebuilding and for the “recursive explain” feature!) which shows how it can look:
+We don't have a ton of well-know extensions at the moment, but here's at least one (and a pretty important one — it's how we store the data for rebuilding and for the "recursive explain" feature!) which shows how it can look:
 
-1. There’s an additional schema, which is wedged onto and tries to pattern-match on the metadata map (whether the module-wide one or the per-release one);
-2. and if it needs another whole document’s worth of data, that document should be referred to by CID (and will go in another directory of known name, with filename that is the CID; see [Catalogs on the Filesystem](https://www.notion.so/Catalogs-on-the-Filesystem-8bf611efa0db4261aef3f66cbf29fcf5)).
+1. There's an additional schema, which is wedged onto and tries to pattern-match on the metadata map (whether the module-wide one or the per-release one);
+2. and if it needs another whole document's worth of data, that document should be referred to by CID (and will go in another directory of known name, with filename that is the CID; see [Catalogs on the Filesystem](https://www.notion.so/Catalogs-on-the-Filesystem-8bf611efa0db4261aef3f66cbf29fcf5)).
 
 ```bash
 # This type can be smashed onto the ReleaseData.metadata map,
@@ -168,7 +168,7 @@ See [https://github.com/warpsys/catalog](https://github.com/warpsys/catalog) for
 
 Many CLI commands for working with catalogs can be found in subcommands of `warpforge catalog`.
 
-One particularly interesting tool is `warpforge catalog generate-html`, which produces a static website showcasing all of a Catalog’s content in a navigable way.
+One particularly interesting tool is `warpforge catalog generate-html`, which produces a static website showcasing all of a Catalog's content in a navigable way.
 
 You can see an example of such a website at [https://catalog.warpsys.org/](https://catalog.warpsys.org/) — this is where a series of packages for the Warpsys project are published!
 
@@ -230,7 +230,7 @@ Beyond that: There's also a couple of attachments that are considered pretty sta
 
 - "Mirrors" is a list of information about where to fetch Wares from.
     - This data can be indexed by WareID, or by ModuleName, etc.
-    - Without this, to actually fetch that data if you didn’t already have it, you’d just have to... run around the whole internet, asking every machine “hey do you have $this WareID?”.  While you could do that — and it would even be “secure”, since WareIDs are cryptographic hashes — it would be beastly inefficient :)
+    - Without this, to actually fetch that data if you didn't already have it, you'd just have to... run around the whole internet, asking every machine "hey do you have $this WareID?".  While you could do that — and it would even be "secure", since WareIDs are cryptographic hashes — it would be beastly inefficient :)
 - Where it lives:
     - In Catalogs on the filesystem, this appears in a `_mirrors.json` file next to the `_module.json` file.  (Both are in a directory that's the module name.)
 - Where it hashes:

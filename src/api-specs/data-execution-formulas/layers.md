@@ -14,7 +14,7 @@ eleventyNavigation:
 ## In superbrief:
 
 1. Content — filesystems, and their hashes.
-2. Execution — hashes go in, something is exec’d, hashes come out.
+2. Execution — hashes go in, something is exec'd, hashes come out.
 3. Plans — multiple steps of execution are described in advance.
 4. Intentions — a templating system can crank out plans.
 
@@ -22,7 +22,7 @@ eleventyNavigation:
 
 - nuff said.  WareIDs.  That's it.
 - A WareID is a content-addressable identifier of a Ware.  A Ware is just a fancy name for (packed) filesystem snapshot.
-- A Ware has no implied or presumed structure.  It’s just files.
+- A Ware has no implied or presumed structure.  It's just files.
 
 ## L1: Hashed / Crystallized / Executable
 

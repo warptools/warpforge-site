@@ -6,6 +6,9 @@ eleventyNavigation:
     order: 60
 ---
 
+Downloads
+=========
+
 Binary downloads for Warpforge are not yet readily available.
 
 Some tags can be found in github: https://github.com/warptools/warpforge/releases

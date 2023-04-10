@@ -1,8 +1,8 @@
 # Warpforge
-Warpforge offers software build tools for language-agnostic, hermetic builds, for developer productivity, security, and sanity.  It’s tooling for developers.  It’s open source.  It gives reproducible environments, so you can do reproducible work.  And we hope it’ll take over the world.
+Warpforge offers software build tools for language-agnostic, hermetic builds, for developer productivity, security, and sanity.  It's tooling for developers.  It's open source.  It gives reproducible environments, so you can do reproducible work.  And we hope it'll take over the world.
 
 ## Warpsys
-A package ecosystem of stuff that’s easy to use in `warpforge`, so that when you want to get stuff done, you can build upon what others have already made!  
+A package ecosystem of stuff that's easy to use in `warpforge`, so that when you want to get stuff done, you can build upon what others have already made!  
 
 It is however optional and you can use `warpforge` however you want, with whatever software inside it you like.
 

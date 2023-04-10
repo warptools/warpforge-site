@@ -6,7 +6,11 @@ eleventyNavigation:
     order: 5
 ---
 
+Getting Started
+===============
+
 Getting started with Warpforge may still be a little bumpy -- we're a young project.  But here's an outline of where you can start:
+
 
 ### Simple Quickstart
 

@@ -5,9 +5,16 @@ eleventyNavigation:
     key: Demos 
     order: 20
 ---
-## Demo videos
 
-Here’s some nice videos of `warpforge` doing its thing:
+Demos
+=====
+
+
+
+Demo videos
+-----------
+
+Here's some nice videos of `warpforge` doing its thing:
 
 - Using the quickstart and writing a module:
     
@@ -26,33 +33,51 @@ Here’s some nice videos of `warpforge` doing its thing:
     [awk in a box](https://asciinema.org/a/CqifX73Z2JwDwLOi7DLm5El1h)
     
 
-You can also find lots of complete examples in the [examples directory](https://github.com/warpfork/warpforge/tree/master/examples) of the project repo — check ‘em out!
+You can also find lots of complete examples in the
+[examples directory](https://github.com/warpfork/warpforge/tree/master/examples)
+of the project repo — check ‘em out!
 
-### Real world software
 
-You can find usable demos of some much less trivial software, built entirely using the Warpsys packaging style (e.g., completely self-contained portable bundles, using the [Warpsys Dynamic Library Linking Strategy](https://www.notion.so/Warpsys-Dynamic-Library-Linking-Strategy-65f91fbd20c349eab8352f4c303445dc), etc), released in [catalog.warpsys.org](http://catalog.warpsys.org) .
+
+Real world software built with Warpforge
+----------------------------------------
+
+Real world Warpforge usage can be seen in two forms:
+Catalogs -- which contain info about released stuff --
+and Workspaces -- which are 
+
+### The Warpsys Catalog
+
+The Warpsys Catalog is a public catalog of software built using Warpforge, and (mostly) using the [Zapps](https://zapps.app/) linking conventions.
 
 For example, you can find packages of software such as Bash, Python, Emacs, Helix, and many more there.
 
-We don’t have recordings of these at present, but you can try it for yourself easily :)
+This catalog is rendered to the web at [**https://catalog.warpsys.org/**](https://catalog.warpsys.org/).
 
-## Real Catalogs
+The raw form of this catalog can also be found as JSON files in git, on github: [github.com/warptools/catalog](https://github.com/warptools/catalog).
 
-The public catalog we maintain — and the one warpforge will fetch by default - is on [github](https://github.com/warptools/catalog)
+### Real Workspaces
 
-This is rendered as navigable HTML. [Check out our live demo](https://catalog.warpsys.org/).
-
-## Real Workspaces
-
-The scripts that build the stuff in the public catalog are all here:
+The instructions to produce the stuff found released in the Warpsys catalog are all here:
 
 [**https://github.com/warptools/warpsys**](https://github.com/warptools/warpsys)
 
-These are a “workspace” (there’s lots of “modules” in there).
+This source code repo contains one large a "workspace".
+Within it, there's lots of "modules", each generally producing one piece of software.
 
-These modules in this workspace are what produces all the stuff in the Catalog described above.
+Note that this is an example of a pretty large workspace.
+Other workspaces may have only a single module in them, and be quite simpler!
 
-## Talks and Presentations
+### Other Catalogs and Workspaces
+
+Other catalogs and workspaces might be found in other places around the internet!
+
+There is nothing special nor blessed about the "warpsys" catalog or workspace.
+
+
+
+Talks and Presentations
+-----------------------
 
 ### GPN2022
 
