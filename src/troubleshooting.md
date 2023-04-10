@@ -6,6 +6,9 @@ eleventyNavigation:
     order: 90
 ---
 
+Troubleshooting
+===============
+
 Here we have some collected info on difficulties folks have encountered while trying to run Warpforge.  Hopefully, you're too lucky to hit any of these yourself — but if you do, maybe these notes can help you fix them.
 
 ## General Debugging Tips
