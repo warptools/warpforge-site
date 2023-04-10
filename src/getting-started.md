@@ -45,4 +45,4 @@ To see more complex examples of Warpforge usage, check out:
 	- as released catalog info, in JSON in git: 
 [**github.com/warptools/catalog**](https://github.com/warptools/catalog)
 	- as released catalog info, in HTML-presented form: [catalog.warpsys.org](http://catalog.warpsys.org)
-- the [examples directory](https://github.com/warpfork/warpforge/tree/master/examples) in the project source repo!
+- the [examples directory](https://github.com/warptools/warpforge/tree/master/examples) in the project source repo!
