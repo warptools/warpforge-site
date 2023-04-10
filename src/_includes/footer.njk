@@ -1,12 +1,25 @@
 {% from "footer-macro.njk" import footerLink %}
 {% set navPages = collections.all | eleventyNavigation %}
 <footer>
-    <a class="logo" href="/">
-        <img width="235" height="51" src="/svg/logo.svg"/>
-    </a>
+    <div class="footer-divider">
+        <a class="logo" href="/">
+            <img width="110" height="25" src="/svg/logo-long.svg"/>
+        </a>
+        <div class="divider"></div>
+    </div>
     <div class="footer-navigation">
         {%- for entry in navPages %}
             {{ footerLink(entry) }}
         {%- endfor %}
+    </div>
+    <div class="footer-navigation">
+        <div>
+            View
+            <a class="neutral" href="https://github.com/warptools/warpforge-site">page source</a>
+        </div>
+        <div>
+            <a class="neutral" href="/contributors">Contributions</a>
+            are appreciated
+        </div>
     </div>
 </footer>

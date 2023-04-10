@@ -96,7 +96,7 @@ We could also readily have e.g. `ipfs+ca://` or other URL schemes to indicate ot
 
 This is a little less paved than some other roads, but we'd love to see it and support it, and we hope to already have set you up for success.
 
-Probably the best way to do this is to introduce a new member to the "action" union — see the API specs in [Formulas and RunRecords](https://www.notion.so/Formulas-and-RunRecords-cb5718bb605e4f799d2bfa119f9c5cf1); that page talks about how to extend the API there.
+Probably the best way to do this is to introduce a new member to the "action" union — see the API specs in [Formulas and RunRecords](/api-specs/data-execution-formulas/formulas-and-runrecords) which talks about how to extend the API there.
 
 The "inputs" system already has support for variable names in place of filesystem mounts, which might be another request we'd imagine you might have.
 
@@ -156,7 +156,7 @@ Warpforge itself is staying focused to the sandboxed execution and content-addre
 
 In practice, there's a ton of other challenges to making composable computation environments that are nice to work with.  The ball-of-mud image snapshotting approach predominates right now, and that really sucks.  We need to figure out how to get away from it.  (Good tools for working with a [Bill of Materials](https://en.wikipedia.org/wiki/Software_bill_of_materials) don't help much if no one makes their materials available in a way that can be referred to be the bill!)
 
-See [Ecosystem Conventions](https://www.notion.so/Ecosystem-Conventions-e0edbaf392b4464490bf7ca9c002595b) for a whole forest of information about how we want to proceed.
+See [Ecosystem Conventions](/ecosystem-conventions) for a whole forest of information about how we want to proceed.
 
 
 
@@ -210,11 +210,11 @@ Otherwise:
 
 #### ...AppImage?
 
-AppImage is more about packaging than about building, so it's not really fitting in the checkmarks pattern above.  But it can be compared to some of the [Ecosystem Conventions](https://www.notion.so/Ecosystem-Conventions-e0edbaf392b4464490bf7ca9c002595b), especially [Warpsys Dynamic Library Linking Strategy](https://www.notion.so/Warpsys-Dynamic-Library-Linking-Strategy-65f91fbd20c349eab8352f4c303445dc).
+AppImage is more about packaging than about building, so it's not really fitting in the checkmarks pattern above.  But it can be compared to some of the [Ecosystem Conventions](/ecosystem-conventions), especially [Zapps](https://zapps.app).
 
 AppImage usually uses SquashFS mounts to bundle all the application's libraries.  This makes things reasonably path-agnostic, which is good, and the same goal as the Warpsys ecosystem conventions.
 
-The [Warpsys Dynamic Library Linking Strategy](https://www.notion.so/Warpsys-Dynamic-Library-Linking-Strategy-65f91fbd20c349eab8352f4c303445dc) works without needing mounts.  This is nice because it's less of an ask from the host system; and also because you have the ability to dedup libraries even with simple techniques like symlink farms (whereas AppImage's squashfs mounts would block such possibilities).
+[Zapps](https://zapps.app) works without needing mounts.  This is nice because it's less of an ask from the host system; and also because you have the ability to dedup libraries even with simple techniques like symlink farms (whereas AppImage's squashfs mounts would block such possibilities).
 
 #### ... some {other thing}?
 
@@ -223,34 +223,6 @@ Alright, look.
 Computing has been done before.  Almost every problem has various possible solutions.  Some choices in the details of how to do things matter; some don't; sometimes its hard to tell which is which until you've done it.  We're here, doing this, because we think some combination of coordinates of the solution space hasn't been explored yet.
 
 If you think this isn't worth doing, because some $projectX has already done it, you're probably the sort of person who says "docker is just lxc", while entirely missing the point of why docker took the world by storm.  To which we must say: have a nice day :)
-
-
-
-## Why are so many of the docs on Notion?
-
-Seealso [What's this Notion for?](https://www.notion.so/What-s-this-Notion-for-7cc8c063cb294ca99195318e506fe3a4).
-
-- it works;
-- it works today/immediately;
-- it seems a little more visually pleasing than straight to a readme on github;
-- it can be edited rapidly, even on mobile;
-- it handles page renames and redirects with zero effort;
-- we lean on the collaborative editing features pretty heavily, especially when drafting stuff or taking meeting notes;
-- it supports public published as well as unpublished (e.g. draft) content, in the same place.
-
-Still not in love with it:
-
-- one can't really have sane deeplinks (Notion's links don't contain parents, and always have long random strings on the end);
-- nor link to headings within a page with readable anchors (e.g. can't `page/#heading` when linking);
-- if you fubar a link, it takes you to a login rather than a 404, which is just weird.
-- Frankly pretty slow render, even for the readonly version (which you'd really think would cache well, wouldn't you).
-- Closed source, and not particularly free.
-- It's not easy to programmatically get our schemas or examples back out, or do other executable-documentation sorts of things.
-- No change history that's even remotely close to on par with Git.
-
-For now, the pros outweigh the cons.
-
-We'll probably move to something more self-hosted and git-oriented someday.  (Contributions welcome if you'd like to help with that!)
 
 
 

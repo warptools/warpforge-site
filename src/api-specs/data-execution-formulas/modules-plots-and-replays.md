@@ -61,7 +61,7 @@ eleventyNavigation:
 - Should this have some kind of support for input bundles?  What would that look like?
     - Design research task:
         
-        [decide if there's a way to work with input bundles](https://www.notion.so/decide-if-there-s-a-way-to-work-with-input-bundles-253132cbe97e41af912b32f18c1d49f2)
+        [decide if there's a way to work with input bundles](https://warpforge.notion.site/decide-if-there-s-a-way-to-work-with-input-bundles-253132cbe97e41af912b32f18c1d49f2)
         
     - Lots of questions here, currently unclear.
     - We didn't prove a need this in the last generation, but arguably also this was about where were started falling down in usability, too, so.
@@ -69,7 +69,7 @@ eleventyNavigation:
 - One likely outcome: Starlark scripts.
     - More about this in other pages.
         
-        [Larks](https://www.notion.so/Larks-059bee14f279479a9f032c4035e69c8f)
+        [Larks](https://warpforge.notion.site/Larks-059bee14f279479a9f032c4035e69c8f)
         
     - We'll probably both built this into the `warpforge` tool so that there's *something* we can make clear recommendations around using, but we also won't make it required.  Subcommands for getting on and off at L2 should still exist and be perfectly sufficient to get stuff done if you want to bring your own L3.
 

@@ -15,7 +15,7 @@ eleventyNavigation:
 ### Considerations
 
 - We probably ought to be able to see how a programmatic ‣ library could be formed here.
-- Remember to try to solve for [understand user story for generating inputs based on proglang](https://www.notion.so/understand-user-story-for-generating-inputs-based-on-proglang-dcde115cc8a141d3a255ddc3aa345d61) with this — ingesting someone else's things probably needs a tool that's "templated" somehow, which means we should be able to see it up here, probably.
+- Remember to try to solve for [understand user story for generating inputs based on proglang](https://warpforge.notion.site/understand-user-story-for-generating-inputs-based-on-proglang-dcde115cc8a141d3a255ddc3aa345d61) with this — ingesting someone else's things probably needs a tool that's "templated" somehow, which means we should be able to see it up here, probably.
 
 ## Larksnips
 
@@ -84,7 +84,7 @@ Are lark libraries an input?  No idea.
 
 ## Drafts
 
-See [Review Starlark for an L3+ language](https://www.notion.so/Review-Starlark-for-an-L3-language-58d5f76e959b4775b24cdc11a6a7c790).
+See [Review Starlark for an L3+ language](https://warpforge.notion.site/Review-Starlark-for-an-L3-language-58d5f76e959b4775b24cdc11a6a7c790).
 
 ```python
 import typicalbase from zomg/foo
@@ -141,7 +141,7 @@ Is any of this, frankly, a good idea?  *Unclear.*  The one critical scorecard ro
 
 Should a lark be stuck emitting just one plot and module?  *Probably not*.
 
-^ See [Path Golgi](https://www.notion.so/Path-Golgi-32f6cea9bb8c47b5ba4610d2e5fa4bd6) — larks should *definitely* be able to emit multiple modules.
+^ See [Path Golgi](https://warpforge.notion.site/Path-Golgi-32f6cea9bb8c47b5ba4610d2e5fa4bd6) — larks should *definitely* be able to emit multiple modules.
 
 Does the above imply that splitting plots and modules might've been a mistake?  *Yes quite possibly.*
 

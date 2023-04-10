@@ -6,10 +6,7 @@ eleventyNavigation:
     parent: API Specs
     order: 30
 ---
-
-# Catalogs
-
-# What are Catalogs?
+## What are Catalogs?
 
 Catalogs contain:
 
@@ -21,11 +18,11 @@ Catalogs contain:
     3. May contain special metadata that references rebuild instructions (e.g. the Warpforge Plot document which should completely reproduce things) — this is called a "replay".
         - (Fun fact: Because Plot documents also include the catalog reference names for all the Plot's inputs... once can then look up those catalog entries, and find their replay plots, and... so on: this is recursively walkable, and can produce total explanations for where some any data or applications came from!)
 
-Catalogs have a schema (like all parts of Warpforge APIs!), but *also* come with a standard definition for how to project them onto a filesystem, because this is often operationally useful.  See [Catalogs on the Filesystem](https://www.notion.so/Catalogs-on-the-Filesystem-8bf611efa0db4261aef3f66cbf29fcf5) for more details on the filesystem projection part; keep reading below for the schema and other general info about Catalogs.
+Catalogs have a schema (like all parts of Warpforge APIs!), but *also* come with a standard definition for how to project them onto a filesystem, because this is often operationally useful.  See [Catalogs on the Filesystem](/api-specs/catalogs-on-the-filesystem) for more details on the filesystem projection part; keep reading below for the schema and other general info about Catalogs.
 
 ## Schema
 
-(Note: the actual load-bearing schema is in [https://github.com/warptools/warpforge/blob/master/wfapi/wfapi.ipldsch](https://github.com/warptools/warpforge/blob/master/wfapi/wfapi.ipldsch) and may have drifted somewhat from what we have in Notion.  Conceptually, they haven't diverged.)
+(Note: the actual load-bearing schema is on [github](https://github.com/warptools/warpforge/blob/master/wfapi/wfapi.ipldsch) and may have drifted somewhat from what we have in our documentation. Conceptually, they haven't diverged.)
 
 ```bash
 ## Catalog is a large data structure that maps human readable names to WareIDs
@@ -79,7 +76,8 @@ type CatalogModuleCapsule union {
 ## A CatalogModule contains a map of named releases,
 ## and also some free-form metadata.
 ##
-## When projected into a filesystem: this data appears in the `{moduleName}/_module.json` file.
+## When projected into a filesystem, this data appears 
+## in the `{moduleName}/_module.json` file.
 ##
 ## Note that the releases map is order-preserving.
 ## Newer content is generally placed at the "top" of the map.
@@ -117,9 +115,11 @@ type CatalogModule struct {
 ## Note the a lack of "capsule" type for versioning this structure;
 ## this because we assume that if this part of the protocol evolves,
 ## then it will do so in tandem with the CatalogModule type,
-## and therefore CatalogModuleCapsule provides enough versioning hints for this area too.
+## and therefore CatalogModuleCapsule provides enough
+## versioning hints for this area too.
 ##
-## When projected into a filesystem: this data appears in the `{moduleName}/_releases/{releaseName}.json` files.
+## When projected into a filesystem: this data appears 
+## in the `{moduleName}/_releases/{releaseName}.json` files.
 type CatalogRelease struct {
 	releaseName ReleaseName
 	items {ItemLabel:WareID}
@@ -146,7 +146,7 @@ When we do have well-known extensions, they generally appear just by conventions
 We don't have a ton of well-know extensions at the moment, but here's at least one (and a pretty important one — it's how we store the data for rebuilding and for the "recursive explain" feature!) which shows how it can look:
 
 1. There's an additional schema, which is wedged onto and tries to pattern-match on the metadata map (whether the module-wide one or the per-release one);
-2. and if it needs another whole document's worth of data, that document should be referred to by CID (and will go in another directory of known name, with filename that is the CID; see [Catalogs on the Filesystem](https://www.notion.so/Catalogs-on-the-Filesystem-8bf611efa0db4261aef3f66cbf29fcf5)).
+2. and if it needs another whole document's worth of data, that document should be referred to by CID (and will go in another directory of known name, with filename that is the CID; see [Catalogs on the Filesystem](/api-specs/catalogs-on-the-filesystem)).
 
 ```bash
 # This type can be smashed onto the ReleaseData.metadata map,
@@ -158,13 +158,13 @@ type MetadataRegardingReplays struct {
 
 ## Filesystem
 
-See [Catalogs on the Filesystem](https://www.notion.so/Catalogs-on-the-Filesystem-8bf611efa0db4261aef3f66cbf29fcf5).
+See [Catalogs on the Filesystem](/api-specs/catalogs-on-the-filesystem).
 
 ## Real world example!
 
 See [https://github.com/warpsys/catalog](https://github.com/warpsys/catalog) for a catalog in the wild (as its filesystem form, in a git repo, which happens to be a dang handy way to handle it).  And check out [https://catalog.warpsys.org/](https://catalog.warpsys.org/) as a rendered version of that data!
 
-# Tools for Working with Catalogs
+## Tools for Working with Catalogs
 
 Many CLI commands for working with catalogs can be found in subcommands of `warpforge catalog`.
 
@@ -174,7 +174,7 @@ You can see an example of such a website at [https://catalog.warpsys.org/](https
 
 The raw data for this website matches the [https://github.com/warpsys/catalog](https://github.com/warpsys/catalog) repo.
 
-# Where do Catalogs live?
+## Where do Catalogs live?
 
 Every Workspace has a Catalog.
 
@@ -184,13 +184,13 @@ The `warpforge catalog bundle` command maintains a workspace's catalog.
 
 Other commands are usually used to manage the named catalogs in a root workspace (because these named catalogs are generally something being shared and coordinated with larger groups of people).
 
-TODO extract summary from [decide how workspaces and catalogs interact](https://www.notion.so/decide-how-workspaces-and-catalogs-interact-beb3a48a26c7428ea623cbb079f08af3).
+TODO extract summary from [decide how workspaces and catalogs interact](https://warpforge.notion.site/decide-how-workspaces-and-catalogs-interact-beb3a48a26c7428ea623cbb079f08af3).
 
 FUTURE: should changelogs be attachable?  As... wares?  (Probably, but also we can probably make this an extension thing using metadata, and specify it later.  Much later.)  (If we make any search tools, they should know how to probe this.)  (May imply that a catalog should have a config detail for "suggested warehouseaddr for misc like changelog blobs"?)
 
-# Releases
+## Releases
 
-## Publishing New Releases
+### Publishing New Releases
 
 Publishing new releases is a multi-phase process.  It starts local, and then you expand it in scope with subsequent actions.
 
@@ -249,6 +249,6 @@ Beyond that: There's also a couple of attachments that are considered pretty sta
 - Where it hashes:
     - Because the release metadata refers to the replay, the hash of the release covers the replay instructions.
 
-# Example Filesystem
+## Example Filesystem
 
-[Catalogs on the Filesystem](https://www.notion.so/Catalogs-on-the-Filesystem-8bf611efa0db4261aef3f66cbf29fcf5)
+[Catalogs on the Filesystem](/api-specs/catalogs-on-the-filesystem)
