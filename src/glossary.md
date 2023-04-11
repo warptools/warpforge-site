@@ -2,6 +2,7 @@
 title: "Glossary"
 layout: base.njk
 eleventyNavigation:
+    key: Glossary
     order: 99
 ---
 
