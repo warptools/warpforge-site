@@ -10,6 +10,17 @@ Styleguide
 
 Here are some guidelines for how to wrangle prose and the raw markdown.
 
+### indentation
+
+_Tabs_, you monster.
+
+Tabs for indentation.  Spaces for alignment.
+
+This is the only solution that lets one configure tabstop size freely at all times,
+and has the great joy of letting the tab key insert tabs and the delete key delete single characters,
+while never producing surprise or invoking heuristics about what should actually happen.
+Simple rules are good.
+
 ### page titles
 
 - Use the `title` property in the frontmatter to set the title that will appear in the page's `<title>` element.
