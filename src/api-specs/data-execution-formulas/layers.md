@@ -7,6 +7,15 @@ eleventyNavigation:
     order: 10
 ---
 
+:::todo
+Content in this page is from older documentation, and needs rewriting.
+
+It's offered here because something is better than nothing,
+but we're aware it's not easy to read.
+Additionally, some content is described as speculative,
+even though it has now been implemented since this document was last updated.
+:::
+
 ## In superbrief:
 
 1. Content — filesystems, and their hashes.
@@ -16,7 +25,7 @@ eleventyNavigation:
 
 ## L0: Content
 
-- nuff said.  WareIDs.  That's it.
+- nuff said.  [WareIDs](/glossary.md#wareid).  That's it.
 - A WareID is a content-addressable identifier of a Ware.  A Ware is just a fancy name for (packed) filesystem snapshot.
 - A Ware has no implied or presumed structure.  It's just files.
 
@@ -54,37 +63,6 @@ eleventyNavigation:
 
 - Can use ingests.  Can use candidates.  Anything goes.  No one expects this to re-resolve identically unless many conditions are met.
     - (n.b. we still do want reproducible resolve to be possible, it's just... not the dominant UX factor at this level.)
-- Ideally these should tend to be pretty standardized if possible, because that's gonna make ecosystem steering easier... but also, there's really no need to be strict about this.
-    - We could have several approaches coexist peaceable.  As long as they're capable of communicating results via Catalogs, everything's peachy.
-- Lots of questions about how powerful these should be.
-    - If this layer has too much power, it will become likely for the ecosystem to drift towards computing L3 being expensive when working with large suites of projects... and we don't really want that.
-- Should this have some kind of support for input bundles?  What would that look like?
-    - Design research task:
-        
-        [decide if there's a way to work with input bundles](https://warpforge.notion.site/decide-if-there-s-a-way-to-work-with-input-bundles-253132cbe97e41af912b32f18c1d49f2)
-        
-    - Lots of questions here, currently unclear.
-    - We didn't prove a need this in the last generation, but arguably also this was about where were started falling down in usability, too, so.
-    - Revisit: probably not, no.  Still haven't conclusively proved we need this, so, we probably don't.
-- One likely outcome: Starlark scripts.
-    - More about this in other pages.
-        
-        [Larks](/api-specs/data-execution-formulas/larks)
-        
-    - We'll probably both built this into the `warpforge` tool so that there's *something* we can make clear recommendations around using, but we also won't make it required.  Subcommands for getting on and off at L2 should still exist and be perfectly sufficient to get stuff done if you want to bring your own L3.
-
-## Tool editing
-
-### for dependency update propagation
-
-... This is mostly averted.
-
-The candidate system addresses it.
-
-And even if we didn't have the candidate system, it's still point mutations.  Not super systemically concerning.
-
-If we support passing down bundles of inputs, then this might get a tad more interesting.
-
-### for proglang depman integrations
-
-This is the scary one, because it's a very very present practical concern, and it kinda looks like if handled incorrectly, it's going to produce an edit loop that results in blurry authorship lines within a single document.
+- Concretely: we support this via "[Buildplugs](/api-specs/data-execution-formulas/buildplugs)".
+    - This is an open-ended extension point -- any process that can produce JSON can be used here.
+    - There is also a starlark buildplug, which we provide as a batteries-included option.
