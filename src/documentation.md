@@ -11,7 +11,6 @@ We're currently working on adding all the documentation here, but in the meantim
 - [Demos](/demos)
 - [Getting Started](/getting-started)
 - [Ecosystem Conventions](/ecosystem-conventions)
-- [Troubleshooting!](/troubleshooting)
 
 ## API Specs
 
@@ -21,3 +20,4 @@ We're currently working on adding all the documentation here, but in the meantim
 ## Warpforge
 
 - [Workspaces](/warpforge/workspaces)
+- [Troubleshooting!](/warpforge/troubleshooting)

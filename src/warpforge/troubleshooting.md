@@ -2,6 +2,7 @@
 title: "Troubleshooting"
 layout: base.njk
 eleventyNavigation: 
+    parent: "Warpforge"
     key: "Troubleshooting"
     order: 90
 ---
