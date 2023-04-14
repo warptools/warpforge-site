@@ -14,6 +14,10 @@ We're currently working on adding all the documentation here, but in the meantim
 - [Troubleshooting!](/troubleshooting)
 
 ## API Specs
+
 - [Catalogs](/api-specs/catalogs)
 - [CLI Overview](/api-specs/cli-overview)
-- [Workspaces](/api-specs/workspaces)
+
+## Warpforge
+
+- [Workspaces](/warpforge/workspaces)
