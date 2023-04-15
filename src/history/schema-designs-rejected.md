@@ -1,15 +1,21 @@
 ---
-title: "Things we're not doing"
+title: "Rejected designs"
 layout: base.njk
-eleventyNavigation: 
-    key: Things we're not doing
-    parent: Data, Execution and Formulas
-    order: 60
+eleventyNavigation:
+    key: Rejected designs
+    parent: History
+    order: 80
 ---
 
-## Things we're not doing
+Schema designs we've rejected
+=============================
 
 This page is for listing API choices we considered, and *rejected*.
+
+Most readers probably don't need to be interested in this,
+but when considering API changes, sometimes the same or similar ideas come up,
+so it's useful to keep some records of how we weighed and made choices in the past.
+
 
 ## Excessive use of unions for inputs and outputs
 
