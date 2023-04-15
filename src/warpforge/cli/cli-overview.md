@@ -3,9 +3,21 @@ title: "CLI Overview"
 layout: base.njk
 eleventyNavigation: 
     key: CLI Overview
-    parent: API Specs
+    parent: Warpforge
     order: 40
 ---
+
+CLI Overview
+============
+
+:::todo
+This page is in need of a refresh.
+
+Our future aim for this sector of documentation is to mirror these online docs with what's available in the `warpforge` CLI,
+and ensure both of those are sufficiently complete and robust to help you find what you need, either online or offline.
+:::
+
+
 ## Meta
 
 For contributors: [https://clig.dev](https://clig.dev/) has some pretty good recommendations about CLI UX goals.
