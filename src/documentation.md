@@ -12,12 +12,14 @@ We're currently working on adding all the documentation here, but in the meantim
 - [Getting Started](/getting-started)
 - [Ecosystem Conventions](/ecosystem-conventions)
 
-## API Specs
-
-- [Catalogs](/api-specs/catalogs)
-- [CLI Overview](/api-specs/cli-overview)
-
 ## Warpforge
 
 - [Workspaces](/warpforge/workspaces)
 - [Troubleshooting!](/warpforge/troubleshooting)
+- [CLI Overview](/api-specs/cli-overview)
+
+## Catalogs
+
+- [Intro to Catalogs](/catalogs/intro-to-catalogs.md)
+- [Catalog Schema](/catalogs/catalog-schema.md)
+- [Catalogs on the Filesystem](/catalogs/catalogs-on-the-filesystem.md)

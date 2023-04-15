@@ -3,17 +3,36 @@ title: "Catalogs on the Filesystem"
 layout: base.njk
 eleventyNavigation: 
     key: Catalogs on the Filesystem
-    parent: API Specs
+    parent: Catalogs
     order: 50
 ---
 
-The filesystem layout is a ***convention***.
+Catalogs on the Filesystem
+==========================
 
-The essential form of a Catalog is just a series of IPLD objects.  We project them into a filesystem layout based on some of their properties, for convenience and ease-of-splunking.
+This document talks about how Catalog data is presented on a filesystem.
 
-Everything is also linked by hash, and the filesystem paths shown here have nothing to do with that merkle tree.  (That a git merkle tree can be computed over the filesystem projection is true, but generally considered incidental.)
 
-## Filesystem Outline
+
+Catalogs on the Filesystem are a Projection
+-------------------------------------------
+
+The first thing to note: Catalogs are a merkle tree, defined natively in [IPLD](https://ipld.io/).
+
+We also have a default and well-known convention for how to project this merkle tree onto a filesystem, as JSON objects.
+However, this is a ***convention***.
+The essential form of a Catalog is still just a series of IPLD objects -- and that's the form that all hashes are defined upon.
+
+The projection into a filesystem layout is based on some of the properties in the data, for convenience and ease-of-splunking.
+
+Some pieces of data may look redundant when observed on the filesystem.
+In particular, the [CID](https://ipld.io/glossary#cid)s which point to other parts of the Catalog data often look "redundant".
+The reason for this is that the underlying merkle tree is purely linked by these CIDs, and the filesystem paths used in the projection are not actually a part of that merkle tree!
+
+
+
+Filesystem Outline
+------------------
 
 Example catalog filesystem outline:
 
@@ -26,9 +45,10 @@ Example catalog filesystem outline:
 
 - `_module.json` contains the `CataloguedModule` object — which contains the module name (remember, the filesystem path is a projection only, so what's in the file is the actual canonical info), and a list of tuples of releaseName and CID of release data.
 - The various `_releases/*.json` files contain one `ReleaseInfo` object each.  (Note that the `CataloguedModule` object linked to these by CID — but yes, the filesystem projection uses the releaseName rather than the CID.  It's a concession to human convenience.  Warpforge will still check that the CID link is correct!)
-- The `_mirrors.json` file contains... [well, you know](/api-specs/catalogs).
+- The `_mirrors.json` file contains... [well, you know](./catalog-schema.md).
 - The `_replays` directory optionally contains replay documents.  If present, they should've been referenced by metadata in the release objects.  These are in files named by CID.
     - This is actually dogfooding our own extension system!  Other directories like this could exist as well!
+
 
 ### Why like this?
 
@@ -50,6 +70,7 @@ Example catalog filesystem outline:
 - Q: Why are replay files *not* using human readable names?  (Especially considering release files got them?)
     - A: It didn't seem worth it.  People want to splunk replay files manually rather less often than release files.  (Usually by the time you're looking at this data, you're about to do something more complex than bash globbing for other reasons anyway.)  And if we tried to project a useful name... the mangle function is getting significant.  We could've put in the extra special effort to put human-readable names on replay files; just seemed both higher cost and lower reward than it did for the release info files; poor ROI in other words.  So we didn't.
     - A: Also, we implemented the replay system using our own extension mechanism...!  And we wanted to have that extension mechanism use directories full of content-addressed objects, rather than opening up the complexity of a name-mangling callback function.  So, this is the result.
+
 
 ### Can you author this filesystem manually?
 

@@ -209,7 +209,7 @@ Root workspaces contain multiple catalogs.
 which contains vendored copies of the information relevant to that workspace's modules.)
 
 Multiple catalogs are used by placing them the `.warpforge/catalogs/*` directory.
-Each directory within this one is expected to contain another [catalog filesystem](/api-specs/catalogs-on-the-filesystem.md),
+Each directory within this one is expected to contain another [catalog filesystem](/catalogs/catalogs-on-the-filesystem.md),
 and the names of those directories become the local alias for that catalog.
 
 Multiple catalogs can be used to, for example, have a public catalog as well as to a personal catalog as well as a catalog that's used for some company workplace content... and be able to refer to data in any of them.
