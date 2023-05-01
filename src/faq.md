@@ -156,7 +156,9 @@ Warpforge itself is staying focused to the sandboxed execution and content-addre
 
 In practice, there's a ton of other challenges to making composable computation environments that are nice to work with.  The ball-of-mud image snapshotting approach predominates right now, and that really sucks.  We need to figure out how to get away from it.  (Good tools for working with a [Bill of Materials](https://en.wikipedia.org/wiki/Software_bill_of_materials) don't help much if no one makes their materials available in a way that can be referred to be the bill!)
 
-See [Ecosystem Conventions](/ecosystem-conventions) for a whole forest of information about how we want to proceed.
+See the [Ecosystem](/ecosystem/) pages for some of the other related work,
+which we attempt to keep compartmentalized from Warpforge core for simplicity and reusability,
+but expect to be part of the way forward.
 
 
 
@@ -210,7 +212,7 @@ Otherwise:
 
 #### ...AppImage?
 
-AppImage is more about packaging than about building, so it's not really fitting in the checkmarks pattern above.  But it can be compared to some of the [Ecosystem Conventions](/ecosystem-conventions), especially [Zapps](https://zapps.app).
+AppImage is more about packaging than about building, so it's not really fitting in the checkmarks pattern above.  But it can be compared to some parts of the [ecosystem](/ecosystem/), especially [Zapps](https://zapps.app).
 
 AppImage usually uses SquashFS mounts to bundle all the application's libraries.  This makes things reasonably path-agnostic, which is good, and the same goal as the Warpsys ecosystem conventions.
 
