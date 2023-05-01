@@ -16,7 +16,7 @@ We're currently working on adding all the documentation here, but in the meantim
 
 - [Workspaces](/warpforge/workspaces)
 - [Troubleshooting!](/warpforge/troubleshooting)
-- [CLI Overview](/api-specs/cli-overview)
+- [CLI Overview](/warpforge/cli/cli-overview)
 
 ## Catalogs
 

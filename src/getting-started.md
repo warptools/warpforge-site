@@ -50,13 +50,24 @@ Getting started with Warpforge may still be a little bumpy -- we're a young proj
 
 ### More references
 
-To see more complex examples of Warpforge usage, check out:
+We have both demos as well as large real-world working systems you can check out for more inspiration:
 
-- the [Demos page](/demos.md)!
-- the Warpsys Catalog!
-	- as source modules in a workspace: 
-[**github.com/warptools/warpsys**](https://github.com/warptools/warpsys)
-	- as released catalog info, in JSON in git: 
-[**github.com/warptools/catalog**](https://github.com/warptools/catalog)
-	- as released catalog info, in HTML-presented form: [catalog.warpsys.org](http://catalog.warpsys.org)
-- the [examples directory](https://github.com/warptools/warpforge/tree/master/examples) in the project source repo!
+#### Demos
+
+... are over on the [Demos page](/demos.md)!
+
+#### Real Systems
+
+The biggest public set of packages built with Warpforge are published in something called the Warpsys Catalog.
+It's both real packages containing software you can use, and a great source of reference material.
+
+There are a couple different ways you can look at the Warpsys Catalog:
+
+- the rendered HTML catalog website: **https://catalog.warpsys.org/**
+	- This is the easiest to navigate -- click through module names to find release info, download links for content, and links to metadata.
+	- In addition to content built with Warpforge, you can find *how it was built* by looking at the [replays](/glossary.md#replay).
+	  For example, this is a replay showing how the warpsys Bash package is built: [catalog.warpsys.org/warpsys.org/bash/_replays/zM5K3Vgei4...Zv5TQ](http://catalog.warpsys.org/warpsys.org/bash/_replays/zM5K3Vgei44et6RzTA785sEZGwuFV75vCazjhR11RH5veFdMTx7F5cg2c4NA5HXPK8Zv5TQ.html)
+- the same Catalog data, but raw, in JSON files, in Git:
+	- [**github.com/warptools/catalog**](https://github.com/warptools/warpsys-catalog)
+- and the source code that produced these build instructions originally:
+	- [**github.com/warptools/warpsys**](https://github.com/warptools/warpsys)
