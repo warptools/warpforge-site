@@ -159,6 +159,11 @@ h3 {
   margin-top: var(--space-lg);
 }
 
+hr {
+  margin: var(--space-xl);
+  border: 1px solid var(--secondary-color);
+}
+
 a.header-anchor:before {
   content: '#';
   color: var(--link-color);
