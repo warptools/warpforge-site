@@ -1,8 +1,8 @@
 ---
-title: "Warpsys"
+title: "Ecosystem: Warpsys"
 layout: base.njk
 eleventyNavigation:
-    key: "Ecosystem: Warpsys"
+    key: "Warpsys"
     parent: "Ecosystem"
     order: 10
 ---
