@@ -13,10 +13,11 @@
     {% endif %}
 {% endmacro %}
 {% macro childFooterLink(entry) %}
+    {# It may be worth putting some more frontmatter flags that let things opt into listing here.  There's currently a lot. #}
     {% if entry.children | length > 0 %}
-        {% for child in entry.children %}
-            {{ childFooterLink(child) }}
-        {% endfor %}
+        <span class="footer-navigation__collection-sublink">
+            <a href="{{ entry.url }}">{{ entry.title }} + ...</a>
+        </span>
     {% else %}
         <span class="footer-navigation__collection-sublink">
             <a href="{{ entry.url }}">{{ entry.title }}</a>
