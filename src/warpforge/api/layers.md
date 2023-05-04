@@ -1,11 +1,14 @@
 ---
-title: "Layers"
+title: "Warpforge API Layers"
 layout: base.njk
-eleventyNavigation: 
-    key: Layers
-    parent: Data, Execution and Formulas
+eleventyNavigation:
+    key: "Layers Overview"
+    parent: "Warpforge API"
     order: 10
 ---
+
+Warpforge API Layers: an Overview
+=================================
 
 :::todo
 Content in this page is from older documentation, and needs rewriting.
@@ -63,6 +66,6 @@ even though it has now been implemented since this document was last updated.
 
 - Can use ingests.  Can use candidates.  Anything goes.  No one expects this to re-resolve identically unless many conditions are met.
     - (n.b. we still do want reproducible resolve to be possible, it's just... not the dominant UX factor at this level.)
-- Concretely: we support this via "[Buildplugs](/api-specs/data-execution-formulas/buildplugs)".
+- Concretely: we support this via "[Buildplugs](./buildplugs.md)".
     - This is an open-ended extension point -- any process that can produce JSON can be used here.
     - There is also a starlark buildplug, which we provide as a batteries-included option.

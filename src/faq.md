@@ -96,7 +96,7 @@ We could also readily have e.g. `ipfs+ca://` or other URL schemes to indicate ot
 
 This is a little less paved than some other roads, but we'd love to see it and support it, and we hope to already have set you up for success.
 
-Probably the best way to do this is to introduce a new member to the "action" union — see the API specs in [Formulas and RunRecords](/api-specs/data-execution-formulas/formulas-and-runrecords) which talks about how to extend the API there.
+Probably the best way to do this is to introduce a new member to the "action" union — see the API specs in [Formulas and RunRecords](/warpforge/api/formulas-and-runrecords) which talks about how to extend the API there.
 
 The "inputs" system already has support for variable names in place of filesystem mounts, which might be another request we'd imagine you might have.
 

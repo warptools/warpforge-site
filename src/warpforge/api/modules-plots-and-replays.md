@@ -2,12 +2,14 @@
 title: "Modules, Plots, and Replays"
 layout: base.njk
 eleventyNavigation:
-	parent: Data, Execution and Formulas
-	order: 40
+    key: "L2: Modules, Plots, and Replays"
+    parent: "Warpforge API"
+    order: 40
 ---
 
-Modules, Plots, and Replays
-===========================
+
+Layer 2 Warpforge APIs: Modules, Plots, and Replays
+===================================================
 
 tl;dr
 -----

@@ -1,21 +1,25 @@
 ---
 title: "Formulas and RunRecords"
 layout: base.njk
-eleventyNavigation: 
-    key: Formulas and RunRecords
-    parent: Data, Execution and Formulas
+eleventyNavigation:
+    key: "L1: Formulas and RunRecords"
+    parent: "Warpforge API"
     order: 30
 ---
+
+
+Layer 1 Warpforge APIs: Formulas and RunRecords
+===============================================
 
 Formulas are the descriptions of computations that we want to happen.
 
 They talk about *inputs*, *actions*, and *outputs*.
 
-Formulas are the key [L1](/api-specs/data-execution-formulas/formulas-and-runrecords) concept.
+Formulas are the key "[Layer 1](./layers.md)" concept.
 
 ## Schema
 
-(And remember, any of the types already defined in [Wares, Inputs and Outputs](/api-specs/data-execution-formulas/wares-inputs-outputs) will continue to be referred to here — this layer is building upon that one.)
+(And remember, any of the types already defined in [Wares, Inputs and Outputs](./wares-inputs-outputs.md) will continue to be referred to here — this layer is building upon that one.)
 
 ## Formulas
 

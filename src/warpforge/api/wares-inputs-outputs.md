@@ -1,11 +1,14 @@
 ---
 title: "Wares, Inputs and Outputs"
 layout: base.njk
-eleventyNavigation: 
-    key: Wares, Inputs and Outputs
-    parent: Data, Execution and Formulas
+eleventyNavigation:
+    key: "L0: Wares, Inputs and Outputs"
+    parent: "Warpforge API"
     order: 20
 ---
+
+Layer 0 Warpforge APIs: Wares, Inputs and Outputs
+=================================================
 
 ## Schema
 
@@ -75,7 +78,7 @@ Literals will be used to describe the value of environment variables, for exampl
 
 ### Inputs and Outputs
 
-We'll talk more about how WareIDs and Mounts are used as the inputs and outputs of computations in the pages for [Formulas and RunRecords](/api-specs/data-execution-formulas/formulas-and-runrecords) and [Modules, Plots, and Replays](/api-specs/data-execution-formulas/modules-plots-and-replays).
+We'll talk more about how WareIDs and Mounts are used as the inputs and outputs of computations in the pages for [Formulas and RunRecords](./formulas-and-runrecords.md) and [Modules, Plots, and Replays](./modules-plots-and-replays.md).
 
 ### Warehousing
 

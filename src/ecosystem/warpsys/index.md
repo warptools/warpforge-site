@@ -37,6 +37,16 @@ The Warpsys catalog is visible in a couple different ways:
 
 
 
+Contributing to Warpsys
+-----------------------
+
+We're happy to have more people working on contributing packages to the Warpsys collection!
+
+Right now the way to do that is simply joining the [community](/community.md) chat,
+and making pull requests to [warpsys source repo](https://github.com/warptools/warpsys).
+
+
+
 Conventions within Warpsys
 --------------------------
 
