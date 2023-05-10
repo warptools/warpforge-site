@@ -39,89 +39,88 @@ module.exports = function (eleventyConfig) {
   // Set up the markdown library.
   //  This includes configuring it to use many plugins for various features (TOCs, header links, etc).
   //   Each plugin is configured in its own `.use(...)` call -- they can be added or removed independently.
-  eleventyConfig.setLibrary(
-    'md',
-    require('markdown-it')({
-      html: true, // Allow html in the markdown.  Disable if your content is not trusted.
-      linkify: true, // Autoconvert URL-like text to links.
-      replaceLink: function (link, env) {
-        // This function transforms links to `*.md` files in the output.
-        //  It allows you to link to source files as they are (and such that links work in e.g. github),
-        //  and also work in the directory structure of the output html.
-        //  Seealso: https://github.com/11ty/eleventy/issues/1204
-        const matcher = new RegExp('^(./|../|/)(.*?)(.md)(#.*?)?$')
-        if (matcher.test(link)) {
-          // Pages with file name index.md are output at a different level in the
-          // directory hierarchy than other pages so we need to fix up relative links
-          // in those pages to their siblings so they connect.
-          const indexPage = env.page.inputPath.endsWith('/index.md')
-          const translatedLink = link.replace(matcher, '$1$2$4')
-          return indexPage
-            ? translatedLink
-            : translatedLink.replace(/^\.\/(.*?)/, '../$1')
-        } else {
-          return link
-        }
+  md = require('markdown-it')({
+    html: true, // Allow html in the markdown.  Disable if your content is not trusted.
+    linkify: true, // Autoconvert URL-like text to links.
+    replaceLink: function (link, env) {
+      // This function transforms links to `*.md` files in the output.
+      //  It allows you to link to source files as they are (and such that links work in e.g. github),
+      //  and also work in the directory structure of the output html.
+      //  Seealso: https://github.com/11ty/eleventy/issues/1204
+      const matcher = new RegExp('^(./|../|/)(.*?)(.md)(#.*?)?$')
+      if (matcher.test(link)) {
+        // Pages with file name index.md are output at a different level in the
+        // directory hierarchy than other pages so we need to fix up relative links
+        // in those pages to their siblings so they connect.
+        const indexPage = env.page.inputPath.endsWith('/index.md')
+        const translatedLink = link.replace(matcher, '$1$2$4')
+        return indexPage
+          ? translatedLink
+          : translatedLink.replace(/^\.\/(.*?)/, '../$1')
+      } else {
+        return link
       }
-    })
+    }
+  })
 
-      // markdown-it-replace-link is required for the replaceLink value above to have effect.
-      .use(require('markdown-it-replace-link'))
+  eleventyConfig.setLibrary('md', md)
 
-      // markdown-it-anchor puts page-local anchors onto headings -- a must-have.
-      .use(require('markdown-it-anchor'), {
-        permalink: true,
-        // Don't put any content in the anchor.  We'll add a visual character in CSS instead.
-        //  (This is important because the anchor tag is placed inside the hN tag.)
-        //  Consider using CSS like: `a.header-anchor:before { float:left; margin-left:-1rem; content:"🔗"; }`.
-        permalinkSymbol: '',
-        permalinkSpace: false, // Again, please don"t add actual text to the inside of the hN tag.
-        permalinkBefore: true,
-        // Generate anchors for everything but h1.  h1 tags are for page titles, and are generally not useful to jump to, so don't make anchors for those.
-        level: [2, 3, 4, 5, 6],
-        // Slugify func.  Must match what's used in the TOC generator.
-        slugify
-      })
+  // markdown-it-replace-link is required for the replaceLink value above to have effect.
+  md.use(require('markdown-it-replace-link'))
 
-      // markdown-it-table-of-contents lets you place a TOC in any page by using `[[toc]]`.
-      .use(require('markdown-it-table-of-contents'), {
-        includeLevel: [2, 3],
-        slugify,
-        transformLink: link => link.replace(/%60/g, '') // remove backticks from markdown code
-      })
+  // markdown-it-anchor puts page-local anchors onto headings -- a must-have.
+  md.use(require('markdown-it-anchor'), {
+    permalink: true,
+    // Don't put any content in the anchor.  We'll add a visual character in CSS instead.
+    //  (This is important because the anchor tag is placed inside the hN tag.)
+    //  Consider using CSS like: `a.header-anchor:before { float:left; margin-left:-1rem; content:"🔗"; }`.
+    permalinkSymbol: '',
+    permalinkSpace: false, // Again, please don"t add actual text to the inside of the hN tag.
+    permalinkBefore: true,
+    // Generate anchors for everything but h1.  h1 tags are for page titles, and are generally not useful to jump to, so don't make anchors for those.
+    level: [2, 3, 4, 5, 6],
+    // Slugify func.  Must match what's used in the TOC generator.
+    slugify
+  })
 
-      // markdown-it-footnote lets you use `[^1]` inline to create footnote links, and `[^1]: the footnote` on a new line later to define it.
-      .use(require('markdown-it-footnote'))
+  // markdown-it-table-of-contents lets you place a TOC in any page by using `[[toc]]`.
+  md.use(require('markdown-it-table-of-contents'), {
+    includeLevel: [2, 3],
+    slugify,
+    transformLink: link => link.replace(/%60/g, '') // remove backticks from markdown code
+  })
 
-      // markdown-it-mark lets you use `==marked==` to highlight text.
-      .use(require('markdown-it-mark'))
+  // markdown-it-footnote lets you use `[^1]` inline to create footnote links, and `[^1]: the footnote` on a new line later to define it.
+  md.use(require('markdown-it-footnote'))
 
-      // markdown-it-container lets you easily create callouts and other kinds of simple containers in markdown..
-      //  We configure it here to support stuff like: `:::tip\nthis is in the tip div\n:::\n`.
-      //  It needs to be accompanied by css to highlight `.callout-tip` (or the other keywords we used here).
-      .use(
-        require('markdown-it-container'),
-        'warn',
-        markdownItContainerCfg('warn')
-      )
-      .use(
-        require('markdown-it-container'),
-        'info',
-        markdownItContainerCfg('info')
-      )
-      .use(
-        require('markdown-it-container'),
-        'tip',
-        markdownItContainerCfg('tip')
-      )
-      .use(
-        require('markdown-it-container'),
-        'todo',
-        markdownItContainerCfg('todo')
-      )
+  // markdown-it-mark lets you use `==marked==` to highlight text.
+  md.use(require('markdown-it-mark'))
 
-    // You may also want to consider yet more plugins, like https://github.com/markdown-it/markdown-it-emoji .
+  // markdown-it-container lets you easily create callouts and other kinds of simple containers in markdown..
+  //  We configure it here to support stuff like: `:::tip\nthis is in the tip div\n:::\n`.
+  //  It needs to be accompanied by css to highlight `.callout-tip` (or the other keywords we used here).
+  md.use(
+    require('markdown-it-container'),
+    'warn',
+    markdownItContainerCfg('warn')
   )
+  md.use(
+    require('markdown-it-container'),
+    'info',
+    markdownItContainerCfg('info')
+  )
+  md.use(
+    require('markdown-it-container'),
+    'tip',
+    markdownItContainerCfg('tip')
+  )
+  md.use(
+    require('markdown-it-container'),
+    'todo',
+    markdownItContainerCfg('todo')
+  )
+
+  // You may also want to consider yet more plugins, like https://github.com/markdown-it/markdown-it-emoji .
 
   // This youtube plugin embeds a youtube player whenever it recognizes a youtube-link
   eleventyConfig.addPlugin(require('eleventy-plugin-youtube-embed'))
