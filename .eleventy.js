@@ -122,6 +122,18 @@ module.exports = function (eleventyConfig) {
 
   // You may also want to consider yet more plugins, like https://github.com/markdown-it/markdown-it-emoji .
 
+  // Customization for certain kinds of code blocks.
+  mdFenceRenderOriginal = md.renderer.rules.fence
+  md.renderer.rules.fence = (tokens, idx, options, env, slf) => {
+    const m = tokens[idx].info.trim().match(/clidoc/);
+    if (m) {
+      const code = tokens[idx].content.trim();
+      return md.render(code);
+    } else {
+      return mdFenceRenderOriginal(tokens, idx, options, env, slf);
+    }
+  }
+
   // This youtube plugin embeds a youtube player whenever it recognizes a youtube-link
   eleventyConfig.addPlugin(require('eleventy-plugin-youtube-embed'))
 
