@@ -65,6 +65,13 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.setLibrary('md', md)
 
+  // markdown-it-image-figures allows us to add images and images that link to other pages
+  // example without link: ![alt tag](images/fig.png)
+  // example with link: [![alt tag](images/fig.png)](/community)
+  md.use(require('markdown-it-image-figures'), {
+    classes: 'md-image'
+  })
+
   // markdown-it-replace-link is required for the replaceLink value above to have effect.
   md.use(require('markdown-it-replace-link'))
 
@@ -109,11 +116,7 @@ module.exports = function (eleventyConfig) {
     'info',
     markdownItContainerCfg('info')
   )
-  md.use(
-    require('markdown-it-container'),
-    'tip',
-    markdownItContainerCfg('tip')
-  )
+  md.use(require('markdown-it-container'), 'tip', markdownItContainerCfg('tip'))
   md.use(
     require('markdown-it-container'),
     'todo',
@@ -125,12 +128,12 @@ module.exports = function (eleventyConfig) {
   // Customization for certain kinds of code blocks.
   mdFenceRenderOriginal = md.renderer.rules.fence
   md.renderer.rules.fence = (tokens, idx, options, env, slf) => {
-    const m = tokens[idx].info.trim().match(/clidoc/);
+    const m = tokens[idx].info.trim().match(/clidoc/)
     if (m) {
-      const code = tokens[idx].content.trim();
-      return md.render(code);
+      const code = tokens[idx].content.trim()
+      return md.render(code)
     } else {
-      return mdFenceRenderOriginal(tokens, idx, options, env, slf);
+      return mdFenceRenderOriginal(tokens, idx, options, env, slf)
     }
   }
 
@@ -168,6 +171,8 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addWatchTarget('./src/svg')
     eleventyConfig.addPassthroughCopy('./src/fonts')
     eleventyConfig.addWatchTarget('./src/fonts')
+    eleventyConfig.addPassthroughCopy('./src/images')
+    eleventyConfig.addWatchTarget('./src/images')
   }
 
   return {

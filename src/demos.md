@@ -17,20 +17,16 @@ Demo videos
 Here's some nice videos of `warpforge` doing its thing:
 
 - Using the quickstart and writing a module:
-    
-    [Warpforge Quickstart Demo](https://asciinema.org/a/ax3iU4aRu17Cx4CG1OYBNCPb6)
+    [![Warpforge Quickstart Demo](/images/quickstart-demo.png)](https://asciinema.org/a/ax3iU4aRu17Cx4CG1OYBNCPb6)
     
 - Adding content to a catalog from the web:
-    
-    [Plot Demo](https://asciinema.org/a/XL03vvethmuqnA1iNJx2xDsRD)
-    
+    [![Plot Demo](/images/plot-demo.png)](https://asciinema.org/a/XL03vvethmuqnA1iNJx2xDsRD)
+
 - Compute using hashes — this is the low-level API on display:
-    
-    [Formula Demo](https://asciinema.org/a/FY4iYhlEi5m0h78oFYqqvIZYc)
+    [![Formula Demo](/images/formula-demo.png)](https://asciinema.org/a/FY4iYhlEi5m0h78oFYqqvIZYc)
     
 - Awk in a box!  This is what it looks like to combine a tool and a dataset (think: reproducible scientific compute, or distributable bigdata jobs):
-    
-    [awk in a box](https://asciinema.org/a/CqifX73Z2JwDwLOi7DLm5El1h)
+    [![awk in a box](/images/awk-in-a-box-demo.png)](https://asciinema.org/a/CqifX73Z2JwDwLOi7DLm5El1h)
     
 
 You can also find lots of complete examples in the

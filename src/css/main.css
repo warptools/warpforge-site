@@ -219,6 +219,11 @@ pre code {
   margin-right: var(--space-sm);
 }
 
+p > img,
+p > a > img {
+  max-width: 100%;
+}
+
 .h-spacing--xs {
   padding-left: var(--space-xs);
 }

@@ -19,7 +19,6 @@
     "url": "https://github.com/**/warpforge-web/issues"
   },
   "homepage": "https://github.com/**/warpforge-web#readme",
-  "dependencies": {},
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-navigation": "^0.3.5",
@@ -30,6 +29,7 @@
     "markdown-it-anchor": "^8.6.7",
     "markdown-it-container": "^3.0.0",
     "markdown-it-footnote": "^3.0.3",
+    "markdown-it-image-figures": "^2.1.1",
     "markdown-it-mark": "^3.0.1",
     "markdown-it-replace-link": "^1.2.0",
     "markdown-it-table-of-contents": "^0.6.0",
