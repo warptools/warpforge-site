@@ -205,23 +205,23 @@
   }
 }
 
-.menu__expand-checkbox:checked ~ .menu__expandable {
+.menu__expand-checkbox:checked + label + .menu__expandable {
   max-height: initial;
 }
 
-.menu__expand-checkbox:checked ~ label {
+.menu__expand-checkbox:checked + label {
   color: var(--primary-color);
 }
 
-.menu__expand-checkbox:checked ~ label .go-to-icon {
+.menu__expand-checkbox:checked + label .go-to-icon {
   background-image: url('/svg/minus.svg');
   transform: none;
 }
 
-.menu__expand-checkbox:checked ~ label:hover .go-to-icon {
+.menu__expand-checkbox:checked + label:hover .go-to-icon {
   transform: rotate(90deg);
 }
 
-.menu__expand-checkbox:checked ~ label:hover ~ .menu__expandable {
+.menu__expand-checkbox:checked + label:hover + .menu__expandable {
   opacity: 0.5;
 }
