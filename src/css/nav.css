@@ -108,6 +108,11 @@
   color: var(--primary-color);
 }
 
+.menu__content .active .go-to-icon {
+  background-image: url('/svg/arrow-right.svg');
+  transform: scaleX(-1) translate(8px);
+}
+
 @media (min-width: 768px) {
   .menu__content {
     transform: translateX(30%);
@@ -126,6 +131,7 @@
   background-image: url('/svg/caret-right.svg');
   background-repeat: no-repeat;
   background-size: contain;
+  margin-bottom: -2px;
 }
 
 .menu__content a:hover .go-to-icon {
