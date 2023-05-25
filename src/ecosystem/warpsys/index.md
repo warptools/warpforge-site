@@ -5,6 +5,7 @@ eleventyNavigation:
     key: "Warpsys"
     parent: "Ecosystem"
     order: 10
+bath: "ecosystem/warpsys"
 ---
 
 Warpsys

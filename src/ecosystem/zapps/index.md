@@ -1,10 +1,12 @@
 ---
 title: "Ecosystem: Zapps"
 layout: base.njk
+bath: "ecosystem/zapps"
 eleventyNavigation:
     key: "Zapps"
     parent: "Ecosystem"
     order: 60
+
 ---
 
 Zapps

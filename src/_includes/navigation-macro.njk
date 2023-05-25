@@ -1,18 +1,30 @@
-{% macro menuItem(entry) %}
+{% macro menuItem(entry, page) %}
     {% if entry.children | length > 0 %}
-        <input class="menu__expand-checkbox" type="checkbox" id="expand-{{ entry.title }}"/>
+        <input class="menu__expand-checkbox" type="checkbox" id="expand-{{ entry.title }}" 
+            {% if page.url %} 
+                {% if page.url.includes(entry.url) %} 
+                    checked 
+                {% endif %}  
+            {% endif %}
+        />
         <label for="expand-{{ entry.title }}">
             {{ entry.title }}
             <span class="go-to-icon"></span>
         </label>
         <div class="menu__expandable menu__content">
             {% for child in entry.children %}
-                {{ menuItem(child) }}
+                {{ menuItem(child, page) }}
             {% endfor %}
         </div>
     {% else %}
-        <a {% if entry.url == page.url %} class="active" {% endif %} href="{{ entry.url }}">
-            {{ entry.title }}
+        <a 
+            {% if page.url %} 
+                {% if page.url.includes(entry.url) %} 
+                    class="active" 
+                {% endif %}
+            {% endif %}
+            href="{{ entry.url }}">
+                {{ entry.title }}
             <span class="go-to-icon"></span>
         </a>
     {% endif %}
