@@ -195,6 +195,7 @@ pre {
   padding: 0 var(--space-xs) var(--space-xs) var(--space-xs);
   border: 1px solid var(--primary-color);
   tab-size: 3;
+  max-width: 100%;
 }
 
 pre code {
@@ -202,12 +203,6 @@ pre code {
   border-radius: 4px;
   padding: 0;
   border: 0;
-}
-
-@media screen and (min-width: 768px) {
-  pre {
-    overflow-x: initial;
-  }
 }
 
 .logo img {
