@@ -26,6 +26,13 @@
   text-decoration: none;
   color: var(--text-color);
   margin-bottom: 0;
+  margin-top: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+  .splash-content__heading {
+    margin-top: 0;
+  }
 }
 
 .splash-content__sub-heading {
@@ -40,6 +47,13 @@
   font-size: 0.8em;
   width: 100%;
   max-width: 400px;
+  order: 2;
+}
+
+@media (min-width: 768px) {
+  .splash-content__start-script {
+    order: initial;
+  }
 }
 
 .script-window {
@@ -129,12 +143,14 @@
   flex-direction: column;
   justify-content: center;
   position: relative;
+  order: 1;
 }
 
 @media (min-width: 768px) {
   .splash-content__cta {
     flex-direction: row;
     width: 100%;
+    order: initial;
   }
 }
 
