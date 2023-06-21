@@ -1,6 +1,6 @@
 ---
 title: "Ecosystem"
-layout: base.njk
+layout: base-with-child-links.njk
 eleventyNavigation:
     key: "Ecosystem"
     order: 60
@@ -55,11 +55,3 @@ Other [catalogs](/glossary.md#catalog) are possible too!
 If you'd like to maintain another catalog and have it listed here, we'll be happy to link to it.
 (Join us in the [community](/community.md) channels to discuss this!)
 
-
-
----
-
-
-
-... You probably want to open the nav menu again to find your way from here!
-This page doesn't have content itself.

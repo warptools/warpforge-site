@@ -231,3 +231,12 @@
 .menu__expand-checkbox:checked + label:hover + .menu__expandable {
   opacity: 0.5;
 }
+
+.child-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.child-links a {
+  font-size: 18px;
+}
