@@ -1,9 +1,9 @@
 ---
 title: "Warpforge API"
-layout: base-with-child-links.njk
+layout: base.njk
 eleventyNavigation:
-    key: "Warpforge API"
-    parent: Warpforge
+    key: api
+    parent: warpforge
     order: 50
 ---
 

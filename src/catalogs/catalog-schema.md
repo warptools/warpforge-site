@@ -3,7 +3,7 @@ title: "Catalog Schema"
 layout: base.njk
 eleventyNavigation:
     key: "Catalog Schema"
-    parent: Catalogs
+    parent: catalogs
     order: 30
 ---
 

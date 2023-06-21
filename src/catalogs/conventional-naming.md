@@ -3,7 +3,7 @@ title: "Conventions for Naming"
 layout: base.njk
 eleventyNavigation:
     key: "Conventions for Naming"
-    parent: Catalogs
+    parent: catalogs
     order: 20
 ---
 

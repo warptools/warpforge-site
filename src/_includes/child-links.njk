@@ -1,15 +1,9 @@
 <div class="child-links">
-    {% set navPages = collections.all | eleventyNavigation %}
-    {%- for entry in navPages %}
-        {% if page
-            .fileSlug
-            .includes(entry.title.toLowerCase()) %}
-            <h2>Read more in one of the subpages to {{entry.title}}</h2>
-            {%- for child in entry.children %}
-                <a href="{{ child.url }}">
-                    {{ child.title }}
-                </a>
-            {%- endfor %}
-        {% endif %}
+    {% set entries = collections.all | eleventyNavigation(page.fileSlug) %}
+    <h2>Read more in one of the subpages to {{title}}</h2>
+    {%- for entry in entries %}
+        <a href="{{ entry.url }}">
+            {{ entry.title }}
+        </a>
     {%- endfor %}
 </div>

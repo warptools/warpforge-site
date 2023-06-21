@@ -2,8 +2,8 @@
 title: "Workspaces"
 layout: base.njk
 eleventyNavigation:
-    key: Workspaces
-    parent: Warpforge
+    key: workspaces
+    parent: warpforge
     order: 40
 ---
 

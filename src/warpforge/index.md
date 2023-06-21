@@ -1,8 +1,8 @@
 ---
 title: "Warpforge"
-layout: base-with-child-links.njk
+layout: base.njk
 eleventyNavigation: 
-    key: Warpforge
+    key: warpforge
     order: 20
 ---
 

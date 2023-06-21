@@ -1,8 +1,8 @@
 ---
 title: "Ecosystem"
-layout: base-with-child-links.njk
+layout: base.njk
 eleventyNavigation:
-    key: "Ecosystem"
+    key: ecosystem
     order: 60
 ---
 

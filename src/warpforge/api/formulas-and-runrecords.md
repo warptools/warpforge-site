@@ -3,7 +3,7 @@ title: "Formulas and RunRecords"
 layout: base.njk
 eleventyNavigation:
     key: "L1: Formulas and RunRecords"
-    parent: "Warpforge API"
+    parent: api
     order: 30
 ---
 

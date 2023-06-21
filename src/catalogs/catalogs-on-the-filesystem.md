@@ -3,7 +3,7 @@ title: "Catalogs on the Filesystem"
 layout: base.njk
 eleventyNavigation: 
     key: Catalogs on the Filesystem
-    parent: Catalogs
+    parent: catalogs
     order: 50
 ---
 

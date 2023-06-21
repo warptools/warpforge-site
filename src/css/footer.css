@@ -71,6 +71,7 @@ footer .logo img {
   font-weight: bold;
   color: #888;
   margin: var(--space-md) 0 0 0;
+  text-transform: capitalize;
 }
 
 @media (min-width: 768px) {

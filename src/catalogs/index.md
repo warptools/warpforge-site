@@ -1,8 +1,8 @@
 ---
 title: "Catalogs"
-layout: base-with-child-links.njk
+layout: base.njk
 eleventyNavigation:
-    key: "Catalogs"
+    key: catalogs
     order: 30
 ---
 

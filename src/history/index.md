@@ -1,8 +1,8 @@
 ---
 title: "History"
-layout: base-with-child-links.njk
+layout: base.njk
 eleventyNavigation:
-    key: "History"
+    key: history
     order: 80
 ---
 

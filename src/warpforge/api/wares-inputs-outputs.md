@@ -3,7 +3,7 @@ title: "Wares, Inputs and Outputs"
 layout: base.njk
 eleventyNavigation:
     key: "L0: Wares, Inputs and Outputs"
-    parent: "Warpforge API"
+    parent: api
     order: 20
 ---
 

@@ -3,7 +3,7 @@ title: "Ecosystem: Linkwarp"
 layout: base.njk
 eleventyNavigation:
     key: "Linkwarp"
-    parent: "Ecosystem"
+    parent: ecosystem
     order: 40 
 ---
 

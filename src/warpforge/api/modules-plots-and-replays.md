@@ -3,7 +3,7 @@ title: "Modules, Plots, and Replays"
 layout: base.njk
 eleventyNavigation:
     key: "L2: Modules, Plots, and Replays"
-    parent: "Warpforge API"
+    parent: api
     order: 40
 ---
 

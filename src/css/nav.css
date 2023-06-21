@@ -94,6 +94,7 @@
   position: relative;
   text-decoration: none !important;
   font-size: 0.8em;
+  text-transform: capitalize;
 }
 
 .menu__content label {
@@ -235,8 +236,11 @@
 .child-links {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .child-links a {
-  font-size: 18px;
+  font-size: 20px;
+  margin-bottom: var(--space-sm);
+  text-transform: capitalize;
 }

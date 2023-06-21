@@ -3,7 +3,7 @@ title: "Warpforge API Layers"
 layout: base.njk
 eleventyNavigation:
     key: "Layers Overview"
-    parent: "Warpforge API"
+    parent: api
     order: 10
 ---
 

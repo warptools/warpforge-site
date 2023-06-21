@@ -18,6 +18,10 @@
         {# <h1>{{ title }}</h1> -- Use a h1 tag each page.  Allows more customization; and makes the markdown files standalone read better. #}
         <main>
             {{ content | safe }}
+            {% set childPages = collections.all | eleventyNavigation(page.fileSlug) %}
+            {% if childPages | length > 0 %}
+                {% include "src/_includes/child-links.njk" %}
+            {% endif %}
         </main>
         {% include "src/_includes/footer.njk" %}
     </body>

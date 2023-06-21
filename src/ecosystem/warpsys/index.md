@@ -3,7 +3,7 @@ title: "Ecosystem: Warpsys"
 layout: base.njk
 eleventyNavigation:
     key: "Warpsys"
-    parent: "Ecosystem"
+    parent: ecosystem
     order: 10
 bath: "ecosystem/warpsys"
 ---
