@@ -1,17 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="/svg/logo.svg">
-        <link rel="mask-icon" href="/svg/logo.svg" color="#a93bba">
-        <link rel="stylesheet" href="/css/main.css"/>
-        <link rel="stylesheet" href="/css/nav.css"/>
-        <link rel="stylesheet" href="/css/flare.css"/>
-        <link rel="stylesheet" href="/css/footer.css"/>
-        <meta name="description" content="Warpforge"/>
-        <title>Warpforge - {{ title }}</title>
-    </head>
+    {% include "src/_includes/head.njk" %}
     <input type="checkbox" id="expand-nav"/>
     <body>
         {% include "src/_includes/navigation.njk" %}

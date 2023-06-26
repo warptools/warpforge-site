@@ -1,20 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="/svg/logo.svg">
-        <link rel="mask-icon" href="/svg/logo.svg" color="#a93bba">
-        <link rel="stylesheet" href="/css/main.css"/>
-        <link rel="stylesheet" href="/css/index.css"/>
-        <link rel="stylesheet" href="/css/nav.css"/>
-        <link rel="stylesheet" href="/css/footer.css"/>
-        <meta name="description" content="Warpforge"/>
-        <title>Warpforge</title>
-    </head>
+    <!-- Overwrites title in head.njk -->
+    <title>Warpforge</title>
+    {% include "src/_includes/head.njk" %}
     <body class="body--no-max">
         <input type="checkbox" id="expand-nav"/>
-            {% include "src/_includes/navigation.njk" %}
+        {% include "src/_includes/navigation.njk" %}
         <div class="splash">
             <div class="splash-content">
                 <h1 class="splash-content__heading">
