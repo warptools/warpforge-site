@@ -4,7 +4,7 @@ layout: base.njk
 bath: "ecosystem/zapps"
 eleventyNavigation:
     key: "Zapps"
-    parent: "Ecosystem"
+    parent: ecosystem
     order: 60
 
 ---

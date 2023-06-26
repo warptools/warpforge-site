@@ -3,7 +3,7 @@ title: "Buildplugs"
 layout: base.njk
 eleventyNavigation:
     key: "L3+: Buildplugs"
-    parent: "Warpforge API"
+    parent: api
     order: 50
 ---
 

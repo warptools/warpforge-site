@@ -94,6 +94,7 @@
   position: relative;
   text-decoration: none !important;
   font-size: 0.8em;
+  text-transform: capitalize;
 }
 
 .menu__content label {
@@ -230,4 +231,16 @@
 
 .menu__expand-checkbox:checked + label:hover + .menu__expandable {
   opacity: 0.5;
+}
+
+.child-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.child-links a {
+  font-size: 20px;
+  margin-bottom: var(--space-sm);
+  text-transform: capitalize;
 }

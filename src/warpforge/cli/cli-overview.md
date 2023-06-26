@@ -3,7 +3,7 @@ title: "CLI Overview"
 layout: base.njk
 eleventyNavigation: 
     key: CLI Overview
-    parent: Warpforge
+    parent: warpforge
     order: 40
 ---
 

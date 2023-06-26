@@ -1,0 +1,9 @@
+<div class="child-links">
+    {% set entries = collections.all | eleventyNavigation(page.fileSlug) %}
+    <h2>Read more in one of the subpages to {{title}}</h2>
+    {%- for entry in entries %}
+        <a href="{{ entry.url }}">
+            {{ entry.title }}
+        </a>
+    {%- endfor %}
+</div>

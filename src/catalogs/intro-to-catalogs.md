@@ -3,7 +3,7 @@ title: "Intro to Catalogs"
 layout: base.njk
 eleventyNavigation:
     key: "Intro to Catalogs"
-    parent: "Catalogs"
+    parent: catalogs
     order: 10
 ---
 

@@ -3,7 +3,7 @@ title: "Rejected designs"
 layout: base.njk
 eleventyNavigation:
     key: Rejected designs
-    parent: History
+    parent: history
     order: 80
 ---
 
