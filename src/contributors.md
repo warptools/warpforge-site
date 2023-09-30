@@ -81,7 +81,7 @@ Tips and Tricks
 
 Usually, your fork repo is called "origin".  It's useful to add an alias for "upstream" that points at the upstream:
 
-- `git remote add upstream [https://github.com/warptools/warpforge](https://github.com/warptools/warpforge)`
+- `git remote add upstream https://github.com/warptools/warpforge`
 
 Now you can do other things like `git fetch upstream` or `git checkout master && git pull upstream/master` to quickly get content from the main upstream repo.
 
