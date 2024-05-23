@@ -12,8 +12,7 @@ If you'd like to contribute directly, you can build and test this website locall
 
 ```
 npm ci
-npx @11ty/eleventy
-npx serve _public
+npx @11ty/eleventy --serve
 ```
 
 
