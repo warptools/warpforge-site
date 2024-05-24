@@ -8,7 +8,12 @@ Contributions are appreciated!
 If you see something that looks off, or you want to add stuff to the website, you can open an [issue](https://github.com/warptools/warpforge-site/issues) to talk to us about it.
 Or, you can fix the problem yourself and create a pull-request when you're done!
 
-If you'd like to contribute directly, you can find some information on how to run the website locally [here](/docs/running-locally.md).
+If you'd like to contribute directly, you can build and test this website locally with:
+
+```
+npm ci
+npx @11ty/eleventy --serve
+```
 
 
 # About the Project Family
