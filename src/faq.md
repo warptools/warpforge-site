@@ -180,53 +180,36 @@ Broadly: warpforge has an emphasis on:
 - No strong opinions about what language you use to template computation instructions.
 - (... and at the end of the day, some elusive, magical UX.  Something that hasn't been hit yet, in any other project, evidentally — because nothing's taken the world by storm yet — and a successful project in this space *should*, because of how useful it would be.)
 
-We don't believe any other projects have hit all of these at once.
+We don't believe any other projects have hit all of these at once. See this table comparing Warpforge to projects:
 
-#### ... Nix?
+<span class="compare-table">
 
-❌ ✅ ✅ 😕 😕 😕 ❌ ❌
+|                              |Warpforge|Nix<br>Guix|Apt<br>Dnf<br>Pacman|Bazel|Runc<br>Docker<br>Podman|AppImage
+|:-----------------------------|:-------:|:---------:|:------------------:|:---:|:----------------------:|:------:
+|Content  Addressable          | ✅      | ❌        | ❌                 | ❌  | ❌                     | ❌ 
+|Hermeticism                   | ✅      | ✅        | ❌                 | ✅  | ✅                     | ❌ 
+|API Driven Composability      | ✅      | ✅        | ❌                 | ❌  | ❌                     | ❌ 
+|Decentralized Catalog         | ✅      | ✅        | ❌                 | ❌  | ✅                     | ✅ 
+|Locally Scoped Workspace      | ✅      | ❌        | ❌                 | ❌  | ❌                     | ✅ 
+|Seperate Packaging/Computation| ✅      | ✅        | ❌                 | ✅  | ❌                     | ❌ 
+|Unopinionated                 | ✅      | ❌        | ❌                 | ✅  | ✅                     | ✅ 
+|Magically Nice UX             | ✅      | ❌        | ✅                 | ❌  | ✅                     | ✅ 
 
-#### ... Guix?
+</span>
 
-❌ ✅ ✅ 😕 😕 😕 ❌ ❌
-
-#### ... Debian or other linux distros?
-
-❌ ❌ ❌ ❌ ❌ ❌ ❌ ✅
-
-(Forgive us for lumping all of these together.  But in general, historically, most linux distros haven't been focused on build environments, so... yeah, there's a lot of red x's here.)
-
-#### ... Bazel?
-
-❌ ✅ ❌ ❌ ❌ ✅ ❓ ❌
-
-#### ... Runc (or other container systems)?
-
-We use them inside, actually.
+Note that Warpforge actually uses containers internally.
 
 Warpforge is pretty much gluing content-addressable data input and output systems onto containers.  (Literally, we template OCI spec files, at the end of the day, and then (usually) invoke `runc`.  It's a good layering!)
 
-Otherwise:
-
-❌ ❓ ✅ ❓ ❌ ❌ ✅ ✅
-
-#### ...AppImage?
-
-AppImage is more about packaging than about building, so it's not really fitting in the checkmarks pattern above.  But it can be compared to some parts of the [ecosystem](/ecosystem/), especially [Zapps](https://zapps.app).
+Also note that  AppImage is more about packaging than about building, so it's not really fitting in the checkmarks pattern above.  But it can be compared to some parts of the [ecosystem](/ecosystem/), especially [Zapps](https://zapps.app).
 
 AppImage usually uses SquashFS mounts to bundle all the application's libraries.  This makes things reasonably path-agnostic, which is good, and the same goal as the Warpsys ecosystem conventions.
 
 [Zapps](https://zapps.app) works without needing mounts.  This is nice because it's less of an ask from the host system; and also because you have the ability to dedup libraries even with simple techniques like symlink farms (whereas AppImage's squashfs mounts would block such possibilities).
 
-#### ... some {other thing}?
+Finally, remember that computing has been done before.  Almost every problem has various possible solutions.  Some choices in the details of how to do things matter; some don't; sometimes its hard to tell which is which until you've done it.  We're here, doing this, because we think some combination of coordinates of the solution space hasn't been explored yet.
 
-Alright, look.
-
-Computing has been done before.  Almost every problem has various possible solutions.  Some choices in the details of how to do things matter; some don't; sometimes its hard to tell which is which until you've done it.  We're here, doing this, because we think some combination of coordinates of the solution space hasn't been explored yet.
-
-If you think this isn't worth doing, because some $projectX has already done it, you're probably the sort of person who says "docker is just lxc", while entirely missing the point of why docker took the world by storm.  To which we must say: have a nice day :)
-
-
+If you think this isn't worth doing, because some other project has already done it, we think you're probably the sort of person who says "docker is just lxc", while entirely missing the point of why docker took the world by storm.  We are building a system that, while not foundationaly new, is more usable then any existing system we are aware of.
 
 ## Does it support dynamic build graphs?
 

@@ -258,3 +258,12 @@ p > a > img {
 .v-spacing--xl {
   padding-bottom: var(--space-xl);
 }
+
+.compare-table table {
+  border: 2px solid gray;
+}
+
+.compare-table th {
+  padding-left: var(--space-sm);
+  padding-right: var(--space-sm);
+}
